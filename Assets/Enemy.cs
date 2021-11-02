@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 100;
-    public float moveSpeed;
+    private int health = 100;
+    [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject player;
 
     // Start is called before the first frame update
