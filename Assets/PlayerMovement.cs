@@ -5,7 +5,6 @@ using UnityEngine;
 // Reference: https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
 public class PlayerMovement : MonoBehaviour
 {
-    
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
