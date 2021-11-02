@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -25,6 +24,10 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
             Destroy(gameObject);
+
+            //TODO: call increaseScore() method from Scores.cs, cant seem to do it cuz im retarded :(
         }
+
+        
     }
 }
