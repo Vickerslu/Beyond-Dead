@@ -15,9 +15,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.name != "Player" && hitInfo.name != "Bullet(Clone)")
+        if (hitInfo.gameObject.tag != "Player" && hitInfo.gameObject.tag != "Bullet")
         {
-            Debug.Log(hitInfo.name);
+            // Debug.Log(hitInfo.name);
             Enemy enemy = hitInfo.GetComponent<Enemy>();
             if (enemy!= null)
             {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -32,5 +33,10 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    void IncreaseHealth(float multiplier)
+    {
+        health = Convert.ToInt32(Math.Floor(health+(health*multiplier)));
     }
 }
