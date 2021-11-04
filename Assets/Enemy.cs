@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        moveSpeed = UnityEngine.Random.Range(1,4.5f);
+        Debug.Log(moveSpeed);
     }
 
     // Update is called once per frame
