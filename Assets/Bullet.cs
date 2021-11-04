@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
             if (enemy!= null)
             {
                 enemy.TakeDamage(damage);
+                Score.score += 1;
             }
             Destroy(gameObject);
 
