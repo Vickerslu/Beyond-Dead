@@ -24,7 +24,11 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
                 Score.score += 10;
             }
-            Destroy(gameObject);
+            else
+            {
+                Destroy(gameObject);
+
+            }
 
             //TODO: call increaseScore() method from Scores.cs, cant seem to do it cuz im retarded :(
         }
