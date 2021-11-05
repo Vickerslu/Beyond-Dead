@@ -48,7 +48,6 @@ public class WaveSpawnerBasic : MonoBehaviour
     {
         if (Enumerable.Range(1,4).Contains(waveCnt))
             {
-                Debug.Log("Running");
                 enemyCnt = Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/5+1) )));
             }
         else
