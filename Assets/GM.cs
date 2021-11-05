@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GM : MonoBehaviour
 {
+    public GameObject bulletPrefab;
+    private Bullet bulletScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletScript = bulletPrefab.GetComponent<Bullet>();
+        bulletScript.damage = 30;
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class GM : MonoBehaviour
             WaveSpawnerBasic wsScript = ws.GetComponent<WaveSpawnerBasic>();
             wsScript.waveCnt = 30;
             wsScript.spawnRate = 1f;
+            bulletScript.damage = 332;
         }
     }
 }

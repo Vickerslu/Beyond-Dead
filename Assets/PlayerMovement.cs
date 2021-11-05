@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
-    [SerializeField] private float stamina = 150f;
+    [SerializeField] private float stamina = 200f;
 
     // Update is called once per frame
     void Update()
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = 5;
         }
-        if(stamina < 150 && !(Input.GetButton("Fire3")))
+        if(stamina < 200 && !(Input.GetButton("Fire3")))
         {
             stamina += 0.40f;
         }
