@@ -8,7 +8,7 @@ using System.Linq;
 public class WaveSpawnerBasic : MonoBehaviour
 {
     [SerializeField] private Text waveCntTxt;
-    [SerializeField] private float spawnRate = 3f;
+    public float spawnRate = 3f;
     private float timeBetweenWaves = 5.0f; //
     private int enemyCnt = 1;
     public int waveCnt = 0;

@@ -12,9 +12,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 150;
         player = GameObject.Find("Player");
-        moveSpeed = UnityEngine.Random.Range(1,4.5f);
+        moveSpeed = UnityEngine.Random.Range(1,4f);
     }
 
     // Update is called once per frame
@@ -26,6 +25,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        Debug.Log("took " + damage + " damage, " + health + " health left");
         if (health <= 0)
         {
             Die();
@@ -41,5 +41,6 @@ public class Enemy : MonoBehaviour
     public void IncreaseHealth(int multiplier)
     {
         health = Convert.ToInt32(Math.Floor(health*(multiplier*0.5f)));
+        Debug.Log(health);
     }
 }
