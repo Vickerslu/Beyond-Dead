@@ -11,7 +11,6 @@ public class GunAim : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-
     // Reference: https://gamedevbeginner.com/start-vs-awake-in-unity/
     void Awake()
     {

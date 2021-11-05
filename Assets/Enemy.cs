@@ -5,16 +5,16 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    private int health = 100;
+    public int health;
     [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        health = 150;
         player = GameObject.Find("Player");
         moveSpeed = UnityEngine.Random.Range(1,4.5f);
-        Debug.Log(moveSpeed);
     }
 
     // Update is called once per frame
@@ -38,8 +38,8 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void IncreaseHealth(float multiplier)
+    public void IncreaseHealth(int multiplier)
     {
-        health = Convert.ToInt32(Math.Floor(health+(health*multiplier)));
+        health = Convert.ToInt32(Math.Floor(health*(multiplier*0.5f)));
     }
 }

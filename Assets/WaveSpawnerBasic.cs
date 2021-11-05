@@ -11,14 +11,14 @@ public class WaveSpawnerBasic : MonoBehaviour
     [SerializeField] private float spawnRate = 3f;
     private float timeBetweenWaves = 5.0f; //
     private int enemyCnt = 1;
-    [SerializeField] private int waveCnt = 0;
+    public int waveCnt = 0;
     [SerializeField] GameObject enemy;
     [SerializeField] Transform[] spawnPoints;
     private float searchCntDwn = 1f;
 
     void Start()
     {
-        Debug.Log("Wave Complete");
+
     }
 
     // Update is called once per frame
@@ -33,11 +33,11 @@ public class WaveSpawnerBasic : MonoBehaviour
         searchCntDwn -= Time.deltaTime;
         if (searchCntDwn <= 0f)
         {
-            Debug.Log("Searching!");
+            // Debug.Log("Searching!");
             searchCntDwn = 1f;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
-                Debug.Log("True!");
+                // Debug.Log("True!");
                 return true;
             }
         }
@@ -52,7 +52,7 @@ public class WaveSpawnerBasic : MonoBehaviour
             }
         else
         {
-            Debug.Log("Stopped!");
+            // Debug.Log("Stopped!");
             enemyCnt = Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)));
 
         }
@@ -64,9 +64,13 @@ public class WaveSpawnerBasic : MonoBehaviour
             {
                 Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Length)];
                 GameObject enemyClone = Instantiate(enemy, randomSpawn.position, Quaternion.identity);
+                enemyClone.GetComponent<Enemy>().IncreaseHealth(waveCnt);
                 yield return new WaitForSeconds(spawnRate);
             }
-            spawnRate -= 0.1f;
+            if (spawnRate>1)
+            {
+                spawnRate -= 0.1f;
+            }
         }
 
     }
