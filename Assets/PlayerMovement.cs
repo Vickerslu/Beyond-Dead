@@ -27,9 +27,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //process inputs, update based on FPS
         ProcessInputs();
-<<<<<<< Updated upstream
-        ProcessSprint();
-=======
  
     }
 
@@ -45,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
->>>>>>> Stashed changes
     }
 
     void FixedUpdate()

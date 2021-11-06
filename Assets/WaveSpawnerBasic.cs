@@ -33,19 +33,11 @@ public class WaveSpawnerBasic : MonoBehaviour
         searchCntDwn -= Time.deltaTime;
         if (searchCntDwn <= 0f)
         {
-<<<<<<< Updated upstream
-            // Debug.Log("Searching!");
-            searchCntDwn = 1f;
-            if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
-            {
-                // Debug.Log("True!");
-=======
             //Debug.Log("Searching!");
             searchCntDwn = 1f;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
                 //Debug.Log("True!");
->>>>>>> Stashed changes
                 return true;
             }
         }
@@ -56,19 +48,12 @@ public class WaveSpawnerBasic : MonoBehaviour
     {
         if (Enumerable.Range(1,4).Contains(waveCnt))
             {
-<<<<<<< Updated upstream
-=======
                 //Debug.Log("Running");
->>>>>>> Stashed changes
                 enemyCnt = Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/5+1) )));
             }
         else
         {
-<<<<<<< Updated upstream
-            // Debug.Log("Stopped!");
-=======
             //Debug.Log("Stopped!");
->>>>>>> Stashed changes
             enemyCnt = Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)));
 
         }
