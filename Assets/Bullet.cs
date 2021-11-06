@@ -24,12 +24,10 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
                 Score.score += 10;
             }
-            Destroy(gameObject);
-<<<<<<< Updated upstream
-=======
-
-            
->>>>>>> Stashed changes
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
