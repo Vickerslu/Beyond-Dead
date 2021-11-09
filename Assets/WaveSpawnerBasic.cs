@@ -33,11 +33,9 @@ public class WaveSpawnerBasic : MonoBehaviour
         searchCntDwn -= Time.deltaTime;
         if (searchCntDwn <= 0f)
         {
-            // Debug.Log("Searching!");
             searchCntDwn = 1f;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
-                // Debug.Log("True!");
                 return true;
             }
         }
@@ -52,7 +50,6 @@ public class WaveSpawnerBasic : MonoBehaviour
             }
         else
         {
-            // Debug.Log("Stopped!");
             enemyCnt = Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)));
 
         }

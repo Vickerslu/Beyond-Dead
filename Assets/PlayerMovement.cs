@@ -10,6 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     [SerializeField] private float stamina = 200f;
 
+    public int hp;
+    public int maxHp;
+    public HealthBar healthBar;
+
+    void Start() {
+        hp = maxHp;
+        healthBar.SetMaxHealth(maxHp);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -54,4 +63,35 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D hitInfo) {
+        if (hitInfo.gameObject.tag == "Enemy")
+        {
+            ReduceHp(10);
+            Debug.Log(hp);
+            if (hp <= 0) {
+                Application.Quit();
+            }
+        }
+    }
+
+    public void ReduceHp(int amount) {
+        hp = hp - amount;
+        if (hp < 0) {
+            hp = 0;
+        }
+        healthBar.SetHealth(hp);
+    }
+
+    public void RestoreHp(int amount) {
+        hp = hp + amount;
+        if (hp > maxHp) {
+            hp = maxHp;
+        }
+        healthBar.SetHealth(hp);
+    }
+
+    public void SetMaxHp(int maxHp) {
+        this.maxHp = maxHp;
+        hp = maxHp;
+    }
 }

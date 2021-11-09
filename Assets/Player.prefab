@@ -355,6 +355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 948813407175538999}
+  stamina: 200
+  hp: 20
+  maxHp: 0
 --- !u!114 &948813407175538998
 MonoBehaviour:
   m_ObjectHideFlags: 0

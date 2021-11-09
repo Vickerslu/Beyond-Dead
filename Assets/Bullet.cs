@@ -17,7 +17,6 @@ public class Bullet : MonoBehaviour
     {
         if (hitInfo.gameObject.tag != "Player" && hitInfo.gameObject.tag != "Bullet")
         {
-            // Debug.Log(hitInfo.name);
             Enemy enemy = hitInfo.GetComponent<Enemy>();
             if (enemy!= null)
             {

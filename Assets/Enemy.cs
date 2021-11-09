@@ -5,9 +5,11 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
     [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject player;
+
+    public int maxHp;
+    public int hp;
 
     // Start is called before the first frame update
     void Start()
@@ -24,23 +26,31 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Debug.Log("took " + damage + " damage, " + health + " health left");
-        if (health <= 0)
+        ReduceHp(damage);
+        Debug.Log("took " + damage + " damage, " + hp + " health left");
+        if (hp <= 0)
         {
-            Die();
+            Destroy(gameObject);
             Score.score += 50;
         }
     }
 
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
     public void IncreaseHealth(int multiplier)
     {
-        health = Convert.ToInt32(Math.Floor(health*(multiplier*0.5f)));
-        Debug.Log(health);
+        hp = Convert.ToInt32(Math.Floor(150*(multiplier*0.5f)));
+    }
+
+    public void ReduceHp(int amount) {
+        hp -= amount;
+        if (hp < 0) {
+            hp = 0;
+        }
+    }
+
+    public void RestoreHp(int amount) {
+        hp += amount;
+        if (hp > maxHp) {
+            hp = maxHp;
+        }
     }
 }
