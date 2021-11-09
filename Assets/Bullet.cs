@@ -25,11 +25,6 @@ public class Bullet : MonoBehaviour
                 Score.score += 10;
             }
             Destroy(gameObject);
-<<<<<<< Updated upstream
-=======
-
-            
->>>>>>> Stashed changes
         }
     }
 }

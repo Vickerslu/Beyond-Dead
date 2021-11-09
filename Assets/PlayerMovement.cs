@@ -10,42 +10,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     [SerializeField] private float stamina = 200f;
 
-    //health components
-    public int maxHealth = 100;
-    public int currentHealth;
-
-    public HealthBar healthBar;
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
-
     // Update is called once per frame
     void Update()
     {
         //process inputs, update based on FPS
         ProcessInputs();
-<<<<<<< Updated upstream
         ProcessSprint();
-=======
- 
-    }
-
-    void OnCollisionEnter2D(Collision2D hitInfo)
-    {
-        if (hitInfo.gameObject.tag == "Enemy")
-        {
-            TakeDamage(10);
-        }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
->>>>>>> Stashed changes
     }
 
     void FixedUpdate()

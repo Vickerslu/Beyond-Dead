@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
     }
 
-
     public void TakeDamage(int damage)
     {
         health -= damage;
