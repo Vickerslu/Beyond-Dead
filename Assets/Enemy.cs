@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject player;
 
+    public bool hasDrop;
+
+    [SerializeField] private GameObject[] parts;
+
     public int maxHp;
     public int hp;
 
@@ -16,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.Find("Player");
         moveSpeed = UnityEngine.Random.Range(1,4f);
+        hasDropFunc();
     }
 
     // Update is called once per frame
@@ -24,12 +29,23 @@ public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
     }
 
+    private void hasDropFunc() {
+        int rand = UnityEngine.Random.Range(1,1);
+        if(rand == 1) {
+            hasDrop = true;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         ReduceHp(damage);
-        Debug.Log("took " + damage + " damage, " + hp + " health left");
+        // Debug.Log("took " + damage + " damage, " + hp + " health left");
         if (hp <= 0)
         {
+            if(hasDrop) {
+                Instantiate(parts[0], transform.position, Quaternion.identity);
+                Debug.Log("Dropped!");
+            }
             Destroy(gameObject);
             Score.score += 50;
         }

@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float maxHp;
     public HealthBar healthBar;
 
+    private Part[] parts;
+
     void Start() {
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
@@ -70,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
         if (hitInfo.gameObject.tag == "Enemy")
         {
             ReduceHp(50f);
-            Debug.Log(hp);
             if (hp <= 0f) {
                 Application.Quit();
             }
