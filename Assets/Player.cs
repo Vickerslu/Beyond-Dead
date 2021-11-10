@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Reference: https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody2D rb;
-    private Vector2 moveDirection;
     [SerializeField] private float stamina = 200f;
-
     public float hp;
     public float maxHp;
     public HealthBar healthBar;
-
     private Part[] parts;
 
     void Start() {
@@ -25,30 +22,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //process inputs, update based on FPS
-        ProcessInputs();
         ProcessSprint();
         if(hp < maxHp && hp != 0f) {
             RegenHealth();
         }
-    }
-
-    void FixedUpdate()
-    {
-        //process physics, independent of FPS
-        Move();
-    }
-
-    void ProcessInputs()
-    {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
-    }
-
-    void Move()
-    {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
     void ProcessSprint()
