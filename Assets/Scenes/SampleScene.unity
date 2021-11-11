@@ -12657,12 +12657,12 @@ PrefabInstance:
     - target: {fileID: 364953608301369900, guid: dbc3f728843abcd4cb5e61fb6699cfc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 364953608301369900, guid: dbc3f728843abcd4cb5e61fb6699cfc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 364953608301369900, guid: dbc3f728843abcd4cb5e61fb6699cfc3,
         type: 3}
@@ -12712,7 +12712,7 @@ PrefabInstance:
     - target: {fileID: 364953608301369907, guid: dbc3f728843abcd4cb5e61fb6699cfc3,
         type: 3}
       propertyPath: orthographic size
-      value: 5.5565796
+      value: 11.342549
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc3f728843abcd4cb5e61fb6699cfc3, type: 3}
@@ -15736,9 +15736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98c857a80270d441b63e105d26780c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5117821049385770109, guid: 376dd5d2178e4b34ea2d41d42444dd9b,
-    type: 3}
-  bulletScript: {fileID: 0}
 --- !u!4 &1232751325
 Transform:
   m_ObjectHideFlags: 0
@@ -16020,12 +16017,12 @@ PrefabInstance:
     - target: {fileID: 948813407175538995, guid: fd5127f17fb48d647b352c2f2cae6fef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 948813407175538995, guid: fd5127f17fb48d647b352c2f2cae6fef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 948813407175538995, guid: fd5127f17fb48d647b352c2f2cae6fef,
         type: 3}
