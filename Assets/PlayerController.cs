@@ -7,15 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     private InputActions playerInput;
     private Vector2 movement;
-    private Vector3 mouseWorldPos;
+    private Vector3 mousePositionInWorld;
     private Rigidbody2D rb;
     private Camera mainCamera;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float movementVelocity = 5f;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletDirection;
-
-    
 
 
     private void Awake(){
@@ -28,8 +26,8 @@ public class PlayerController : MonoBehaviour
         playerInput.Player.Fire.performed += _ => PlayerShoot();
     }
     private void PlayerShoot(){
-        Vector2 mousePosition = playerInput.Player.Look.ReadValue<Vector2>();
-        mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
+        Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
+        mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         g.SetActive(true);
@@ -43,13 +41,11 @@ public class PlayerController : MonoBehaviour
         playerInput.Disable();
     }
 
-
     void Update(){
         //rotation
-        Vector2 mouseScreenPos = playerInput.Player.Look.ReadValue<Vector2>();
-        mouseWorldPos = mainCamera.ScreenToWorldPoint(mouseScreenPos);
-
-        Vector3 targetDirection = mouseWorldPos - transform.position;
+        Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
+        mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
+        Vector3 targetDirection = mousePositionInWorld - transform.position;
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
