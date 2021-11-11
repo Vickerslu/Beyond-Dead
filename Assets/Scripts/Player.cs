@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     public float hp;
     public float maxHp;
     public HealthBar healthBar;
-    private Part[] parts;
+
+    public int parts = 0;
 
     void Start() {
         hp = maxHp;
@@ -22,43 +23,62 @@ public class Player : MonoBehaviour
     void Update()
     {
         //process inputs, update based on FPS
-        ProcessSprint();
+        // ProcessSprint();
         if(hp < maxHp && hp != 0f) {
             RegenHealth();
         }
     }
 
-    void ProcessSprint()
-    {
-        if(Input.GetButton("Fire3") && stamina > 0f)
-        {
-            moveSpeed = 8;
-            stamina -= 0.5f;
-        }
-        else
-        {
-            moveSpeed = 5;
-        }
-        if(stamina < 200 && !(Input.GetButton("Fire3")))
-        {
-            stamina += 0.40f;
-        }
-    }
+    // void ProcessSprint()
+    // {
+    //     if(Input.GetButton("Fire3") && stamina > 0f)
+    //     {
+    //         moveSpeed = 8;
+    //         stamina -= 0.5f;
+    //     }
+    //     else
+    //     {
+    //         moveSpeed = 5;
+    //     }
+    //     if(stamina < 200 && !(Input.GetButton("Fire3")))
+    //     {
+    //         stamina += 0.40f;
+    //     }
+    // }
 
     private void OnCollisionEnter2D(Collision2D hitInfo) {
         if (hitInfo.gameObject.tag == "Enemy")
         {
             ReduceHp(50f);
-            if (hp <= 0f) {
-                Application.Quit();
+        }
+        if (hitInfo.gameObject.tag == "Ship") {
+            if(parts >= 5) {
+                Ship.Repair(parts);
+                ChangeParts(-parts);
+                Debug.Log("Added parts");
             }
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Debug.Log("Collision");
+        if (hitInfo.gameObject.tag == "Part") {
+            ChangeParts(5);
+            Destroy(hitInfo.gameObject);
+        }
+    }
+
+    public void ChangeParts(int amount) {
+        parts += amount;
+        PartText.parts += amount;
     }
 
     public void ReduceHp(float amount) {
         hp = hp - amount;
         if (hp < 0f) {
             hp = 0f;
+            Application.Quit();
         }
         healthBar.SetHealth(hp);
     }

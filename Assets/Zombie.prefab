@@ -149,7 +149,6 @@ MonoBehaviour:
   moveSpeed: 0
   player: {fileID: 948813407175538985, guid: fd5127f17fb48d647b352c2f2cae6fef, type: 3}
   hasDrop: 0
-  parts:
-  - {fileID: 8942683790646432473, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
+  part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
   maxHp: 150
   hp: 0

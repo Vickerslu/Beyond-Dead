@@ -9,8 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject player;
 
     public bool hasDrop;
-
-    [SerializeField] private GameObject[] parts;
+    public Part part;
 
     public int maxHp;
     public int hp;
@@ -43,7 +42,7 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             if(hasDrop) {
-                Instantiate(parts[0], transform.position, Quaternion.identity);
+                Instantiate(part, transform.position, Quaternion.identity);
                 Debug.Log("Dropped!");
             }
             Destroy(gameObject);

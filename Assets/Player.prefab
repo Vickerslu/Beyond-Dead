@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 948813407175538984}
   - component: {fileID: -2038372096476869428}
   - component: {fileID: -3560717371864532699}
+  - component: {fileID: 8021980791579892325}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -499,6 +500,25 @@ MonoBehaviour:
   movementVelocity: 5
   bullet: {fileID: 5117821049385770109, guid: 376dd5d2178e4b34ea2d41d42444dd9b, type: 3}
   bulletDirection: {fileID: 0}
+--- !u!114 &8021980791579892325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948813407175538985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ef84998a45fc8499df56d49c2627a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  rb: {fileID: 0}
+  stamina: 200
+  hp: 0
+  maxHp: 0
+  healthBar: {fileID: 0}
+  parts: 0
 --- !u!1 &948813407221456917
 GameObject:
   m_ObjectHideFlags: 0
