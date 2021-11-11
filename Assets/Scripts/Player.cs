@@ -82,8 +82,9 @@ public class Player : MonoBehaviour
     IEnumerator RegenHealth() {
         regeningHp = true;
         while(hp < maxHp) {
-            RestoreHp(5f);
+            RestoreHp(3f);
             yield return new WaitForSeconds(1);
         }
+        regeningHp = false;
     }
 }

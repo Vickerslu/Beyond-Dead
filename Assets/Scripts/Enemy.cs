@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void hasDropFunc() {
-        int rand = UnityEngine.Random.Range(1,1);
+        int rand = UnityEngine.Random.Range(1,5);
         if(rand == 1) {
             hasDrop = true;
         }
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
     public void IncreaseHealth(int multiplier)
     {
-        hp = Convert.ToInt32(Math.Floor(150*(multiplier*0.5f)));
+        hp = Convert.ToInt32(Math.Floor(150*(multiplier*0.3f)));
     }
 
     public void ReduceHp(int amount) {
