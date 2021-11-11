@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 // Reference: https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
 public class Player : MonoBehaviour
 {
-    public float moveSpeed;
-    public Rigidbody2D rb;
-    [SerializeField] private float stamina = 200f;
     public float hp;
     public float maxHp = 100f;
 
@@ -29,23 +26,6 @@ public class Player : MonoBehaviour
             StartCoroutine(RegenHealth());
         }
     }
-
-    // void ProcessSprint()
-    // {
-    //     if(Input.GetButton("Fire3") && stamina > 0f)
-    //     {
-    //         moveSpeed = 8;
-    //         stamina -= 0.5f;
-    //     }
-    //     else
-    //     {
-    //         moveSpeed = 5;
-    //     }
-    //     if(stamina < 200 && !(Input.GetButton("Fire3")))
-    //     {
-    //         stamina += 0.40f;
-    //     }
-    // }
 
     private void OnCollisionEnter2D(Collision2D hitInfo) {
         if (hitInfo.gameObject.tag == "Enemy")

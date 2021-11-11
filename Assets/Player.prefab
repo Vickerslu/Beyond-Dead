@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0cfdd9cc9768c41a8fed9d5c487908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
-  movementVelocity: 5
+  speed: 80
+  movementVelocity: 10
   bullet: {fileID: 5117821049385770109, guid: 376dd5d2178e4b34ea2d41d42444dd9b, type: 3}
   bulletDirection: {fileID: 0}
 --- !u!114 &8021980791579892325
@@ -512,12 +512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ef84998a45fc8499df56d49c2627a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  rb: {fileID: 0}
-  stamina: 200
   hp: 0
   maxHp: 0
   healthBar: {fileID: 0}
+  regeningHp: 0
   parts: 0
 --- !u!1 &948813407221456917
 GameObject:
