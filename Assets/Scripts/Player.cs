@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float maxHp = 100f;
 
     public HealthBar healthBar;
+    public bool regeningHp = false;
 
     public int parts = 0;
 
@@ -23,17 +24,14 @@ public class Player : MonoBehaviour
     
     
     void Start() {
-        //hp = maxHp;
-        //healthBar.SetMaxHealth(maxHp);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //process inputs, update based on FPS
-        // ProcessSprint();
-        if(hp < maxHp && hp != 0f) {
-            //RegenHealth();
+        if(hp != maxHp && !regeningHp) {
+            StartCoroutine(RegenHealth());
         }
     }
 
@@ -58,8 +56,7 @@ public class Player : MonoBehaviour
         //Debug.Log("collision");
         if (hitInfo.gameObject.tag == "Enemy")
         {
-             
-             ReduceHp(10f);
+             ReduceHp(25f);
         }
         if (hitInfo.gameObject.tag == "Ship") {
             if(parts >= 5) {
@@ -107,9 +104,11 @@ public class Player : MonoBehaviour
         hp = maxHp;
     }
 
-    private void RegenHealth() {
+    IEnumerator RegenHealth() {
+        regeningHp = true;
         while(hp < maxHp) {
-            RestoreHp(0.001f);
+            RestoreHp(5f);
+            yield return new WaitForSeconds(1);
         }
     }
 }
