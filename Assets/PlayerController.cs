@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Awake(){
         playerInput = new InputActions();
         rb = GetComponent<Rigidbody2D>();
+        camera = Camera.main;
     }
 
     private void OnEnable(){
