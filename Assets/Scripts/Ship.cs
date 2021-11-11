@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class Ship : MonoBehaviour
     {
         repairProgress += amount;
         Debug.Log(repairProgress + " repair progress!");
-        if(repairProgress >= 100) {
-            //do something
+        if(repairProgress >= 10) {
+            SceneManager.LoadScene(2);
         }
     }
 }
