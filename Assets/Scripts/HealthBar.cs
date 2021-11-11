@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-//https://www.youtube.com/watch?v=0T5ei9jN63M
-
 public class HealthBar : MonoBehaviour
 {
 
@@ -16,13 +13,13 @@ public class HealthBar : MonoBehaviour
 	{
 		slider.maxValue = health;
 		slider.value = health;
-
 	}
 
     public void SetHealth(float health)
 	{
+		
+        Debug.Log("hp: " + health);
 		slider.value = health;
-
 	}
 
 } 

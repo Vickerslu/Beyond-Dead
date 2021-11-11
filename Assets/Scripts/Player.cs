@@ -9,14 +9,22 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] private float stamina = 200f;
     public float hp;
-    public float maxHp;
+    public float maxHp = 100f;
+
     public HealthBar healthBar;
 
     public int parts = 0;
 
-    void Start() {
+    void Awake() 
+    {
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
+    }    
+    
+    
+    void Start() {
+        //hp = maxHp;
+        //healthBar.SetMaxHealth(maxHp);
     }
 
     // Update is called once per frame
@@ -25,7 +33,7 @@ public class Player : MonoBehaviour
         //process inputs, update based on FPS
         // ProcessSprint();
         if(hp < maxHp && hp != 0f) {
-            RegenHealth();
+            //RegenHealth();
         }
     }
 
@@ -47,9 +55,11 @@ public class Player : MonoBehaviour
     // }
 
     private void OnCollisionEnter2D(Collision2D hitInfo) {
+        //Debug.Log("collision");
         if (hitInfo.gameObject.tag == "Enemy")
         {
-            ReduceHp(50f);
+             
+             ReduceHp(10f);
         }
         if (hitInfo.gameObject.tag == "Ship") {
             if(parts >= 5) {
@@ -80,6 +90,7 @@ public class Player : MonoBehaviour
             hp = 0f;
             Application.Quit();
         }
+        
         healthBar.SetHealth(hp);
     }
 
@@ -98,7 +109,7 @@ public class Player : MonoBehaviour
 
     private void RegenHealth() {
         while(hp < maxHp) {
-            RestoreHp(10f*Time.deltaTime);
+            RestoreHp(0.001f);
         }
     }
 }
