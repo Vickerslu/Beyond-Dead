@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
         mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
         Vector3 targetDirection = mousePositionInWorld - transform.position;
+        // quaternion.euler rotatoin https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
