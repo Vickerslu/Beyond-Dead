@@ -13,7 +13,7 @@ public class Ship : MonoBehaviour
         repairProgress += amount;
         Debug.Log(repairProgress + " repair progress!");
         if(repairProgress >= 10) {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }

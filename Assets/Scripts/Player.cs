@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Reference: https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
 public class Player : MonoBehaviour
@@ -21,13 +22,7 @@ public class Player : MonoBehaviour
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
     }    
-    
-    
-    void Start() {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(hp != maxHp && !regeningHp) {
@@ -53,7 +48,6 @@ public class Player : MonoBehaviour
     // }
 
     private void OnCollisionEnter2D(Collision2D hitInfo) {
-        //Debug.Log("collision");
         if (hitInfo.gameObject.tag == "Enemy")
         {
              ReduceHp(25f);
@@ -85,7 +79,8 @@ public class Player : MonoBehaviour
         hp = hp - amount;
         if (hp < 0f) {
             hp = 0f;
-            Application.Quit();
+            
+            SceneManager.LoadScene(2);
         }
         
         healthBar.SetHealth(hp);
