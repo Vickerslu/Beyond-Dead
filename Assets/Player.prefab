@@ -353,7 +353,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -496,8 +496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 75
-  camera: {fileID: 0}
-  stamina: 200
+  movementVelocity: 5
+  bullet: {fileID: 5117821049385770109, guid: 376dd5d2178e4b34ea2d41d42444dd9b, type: 3}
+  bulletDirection: {fileID: 0}
 --- !u!1 &948813407221456917
 GameObject:
   m_ObjectHideFlags: 0

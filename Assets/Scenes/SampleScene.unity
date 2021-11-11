@@ -15738,6 +15738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5117821049385770109, guid: 376dd5d2178e4b34ea2d41d42444dd9b,
     type: 3}
+  bulletScript: {fileID: 0}
 --- !u!4 &1232751325
 Transform:
   m_ObjectHideFlags: 0
@@ -15994,6 +15995,11 @@ PrefabInstance:
     - target: {fileID: -3560717371864532699, guid: fd5127f17fb48d647b352c2f2cae6fef,
         type: 3}
       propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1732242344}
+    - target: {fileID: -3560717371864532699, guid: fd5127f17fb48d647b352c2f2cae6fef,
+        type: 3}
+      propertyPath: bulletDirection
       value: 
       objectReference: {fileID: 1732242344}
     - target: {fileID: 948813407175538985, guid: fd5127f17fb48d647b352c2f2cae6fef,

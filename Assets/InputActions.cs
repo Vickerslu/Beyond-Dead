@@ -28,7 +28,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Look"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""125b7a33-fc9b-4b9a-bcfc-aa370a9c2ec4"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -190,7 +190,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
-                    ""path"": ""<Pointer>/delta"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse;Touch"",
