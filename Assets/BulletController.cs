@@ -8,12 +8,8 @@ public class BulletController : MonoBehaviour
     public int damage = 30;
     public Rigidbody2D rb;
 
-    void Start()
-    {
-        //rb.velocity = transform.right * speed;
-    }
     void Update(){
-        transform.Translate(transform.up * speed * Time.deltaTime);
+        transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)

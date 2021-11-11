@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     private void PlayerShoot(){
         Vector2 mousePosition = playerInput.Player.Look.ReadValue<Vector2>();
         mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
-        Debug.Log(mousePosition);
 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         g.SetActive(true);
