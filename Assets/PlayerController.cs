@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private InputActions playerInput;
     private Vector2 movement;
-    private Vector2 mousePos;
+    private Vector3 mouseWorldPos;
     private Rigidbody2D rb;
     private Camera mainCamera;
     [SerializeField] private float speed = 10f;
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void PlayerShoot(){
         Vector2 mousePosition = playerInput.Player.Look.ReadValue<Vector2>();
         mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
+        Debug.Log(mousePosition);
 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         g.SetActive(true);
@@ -46,16 +47,15 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
         //rotation
-        Vector3 mouseScreenPos = playerInput.Player.Look.ReadValue<Vector2>();
-        mousePos = mainCamera.ScreenToWorldPoint(mouseScreenPos);
+        Vector2 mouseScreenPos = playerInput.Player.Look.ReadValue<Vector2>();
+        mouseWorldPos = mainCamera.ScreenToWorldPoint(mouseScreenPos);
 
-        Vector3 targetDirection = mouseScreenPos - transform.position;
+        Vector3 targetDirection = mouseWorldPos - transform.position;
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
         //movement
         Vector3 movement = playerInput.Player.Move.ReadValue<Vector2>() * movementVelocity;
         rb.AddForce(movement * speed * Time.deltaTime);
-        
     }
 }

@@ -13,7 +13,7 @@ public class BulletController : MonoBehaviour
         //rb.velocity = transform.right * speed;
     }
     void Update(){
-        transform.Translate(transform.right * speed * Time.deltaTime);
+        transform.Translate(transform.up * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
