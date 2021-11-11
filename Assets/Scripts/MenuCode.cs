@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MenuCode : MonoBehaviour
 {
-    public Text pointsText;
+    // public Text pointsText;
     public void Start(){
-        pointsText.text = Score.score.ToString() + " Points!";
-        Debug.Log(pointsText.text);
+        // pointsText.text = Score.score.ToString() + " Points!";
+        // Debug.Log(pointsText.text);
     }    
     
     public void PlayGame()

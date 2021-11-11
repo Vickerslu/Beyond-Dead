@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642cfe919ec196043b86c4da3243243c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsText: {fileID: 0}
 --- !u!1 &332889302
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,15 +282,15 @@ RectTransform:
   m_GameObject: {fileID: 517859484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.95506, y: 2.95506, z: 2.95506}
+  m_LocalScale: {x: 2.440466, y: 2.440466, z: 2.440466}
   m_Children: []
   m_Father: {fileID: 210289570}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292, y: -100}
-  m_SizeDelta: {x: 247.3674, y: 89.0558}
+  m_AnchoredPosition: {x: 208, y: -111}
+  m_SizeDelta: {x: 373.9013, y: 216.7872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517859486
 MonoBehaviour:
@@ -313,29 +314,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 50
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move - WASD
-
-    Shoot - Left Click
-
-    Sprint - Left Shift
-
-    Skip
-    to Round 30 (DEMO PURPOSES) - Space
-
-
-    Health system for the player is in
-    progress, in the mean time play as if you can take damage ;)'
+  m_Text: "Beyond Dead is a top-down shooter. \n\nA brave adventurer wakes up on
+    an unexplored planet after colliding with a meteor. The ship looks fixable, but
+    they must collect resources from the planet to get back up and running. \n\nHowever,
+    they are not alone...\n\nZombie-like creatures inhabit the planet and are hoarding
+    materials, and they're not keen on sharing- or visitors for that matter!\n\nMaybe
+    if they can get these materials from them, they could bring them back to the
+    crash site and fix the ship.\n\nMove - WASD\nAim - Mouse\nShoot - Left Click"
 --- !u!222 &517859487
 CanvasRenderer:
   m_ObjectHideFlags: 0
