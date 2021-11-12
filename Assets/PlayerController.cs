@@ -15,16 +15,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletDirection;
 
-
+    // instantiate player input into variable and set rb
     private void Awake(){
         playerInput = new InputActions();
         rb = GetComponent<Rigidbody2D>();
     }
 
+    // sets main camera to variable, calls PlayerShoot when user clicks
     private void Start(){
         mainCamera = Camera.main;
         playerInput.Player.Fire.performed += _ => PlayerShoot();
     }
+
+    //  get mouse pos, create bullet with correct attributes
     private void PlayerShoot(){
         Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
         mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
         playerInput.Disable();
     }
 
+    // get mouse pos, do math to calculate rotation ammount, rotate player. Also move player using AddForce
     void Update(){
         //rotation
         Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
