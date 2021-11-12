@@ -59,8 +59,8 @@ public class WaveSpawnerBasic : MonoBehaviour
             waveCnt += 1;
             for (int i=0; i < enemyCnt; i++)
             {
-                // Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Length)];
-                Transform randomSpawn  = spawnPoints[0];
+                Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Length)];
+                // Transform randomSpawn  = spawnPoints[0];
                 GameObject enemyClone = Instantiate(enemy, randomSpawn.position, Quaternion.identity);
                 enemyClone.GetComponent<Enemy>().IncreaseHealth(waveCnt);
                 yield return new WaitForSeconds(spawnRate);
