@@ -9,12 +9,14 @@ public class HealthBar : MonoBehaviour
 
     public Slider slider;
 
+	//sets the max health of the player to the slider
 	public void SetMaxHealth(float health)
 	{
 		slider.maxValue = health;
 		slider.value = health;
 	}
 
+	//sets the current health of the player to the slider
     public void SetHealth(float health)
 	{
         Debug.Log("hp: " + health);
