@@ -59,7 +59,6 @@ public class Player : MonoBehaviour
         hp = hp - amount;
         if (hp < 0f) {
             hp = 0f;
-            
             SceneManager.LoadScene(2);
         }
         

@@ -288,8 +288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292, y: -100}
-  m_SizeDelta: {x: 247.3674, y: 89.0558}
+  m_AnchoredPosition: {x: 236.80872, y: -110.4863}
+  m_SizeDelta: {x: 309.3745, y: 207.4669}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517859486
 MonoBehaviour:
@@ -313,29 +313,25 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move - WASD
-
-    Shoot - Left Click
-
-    Sprint - Left Shift
-
-    Skip
-    to Round 30 (DEMO PURPOSES) - Space
-
-
-    Health system for the player is in
-    progress, in the mean time play as if you can take damage ;)'
+  m_Text: "Beyond Dead is a top-down shooter. \r\n\r\nA brave adventurer wakes up
+    on an unexplored planet after colliding with a meteor. The ship looks fixable,
+    but they must collect resources from the planet to get back up and running. \r\n\r\nHowever,
+    they are not alone...\r\n\r\nZombie-like creatures inhabit the planet and are
+    hoarding materials, and they're not keen on sharing- or visitors for that matter!\r\n\r\nMaybe
+    if they can get these materials from them, they could bring them back to the
+    crash site and fix the ship.\r\n\r\nMove - WASD\r\nAim - Mouse\r\nShoot - Left
+    Click"
 --- !u!222 &517859487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -990,7 +986,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1863599640
 MonoBehaviour:
   m_ObjectHideFlags: 0
