@@ -8,20 +8,15 @@ using System.Linq;
 public class WaveSpawnerBasic : MonoBehaviour
 {
     [SerializeField] private Text waveCntTxt;
-    public float spawnRate = 3f;
-    private float timeBetweenWaves = 5.0f; //
+    public float spawnRate = 2f;
     private int enemyCnt = 1;
     public int waveCnt = 0;
+
     [SerializeField] GameObject enemy;
     [SerializeField] Transform[] spawnPoints;
+    
     private float searchCntDwn = 1f;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         waveCntTxt.text = "Round: " + waveCnt.ToString();
@@ -46,7 +41,7 @@ public class WaveSpawnerBasic : MonoBehaviour
     {
         if (Enumerable.Range(1,4).Contains(waveCnt))
             {
-                enemyCnt = Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/5+1) )));
+                enemyCnt = Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/2+5) )));
             }
         else
         {
