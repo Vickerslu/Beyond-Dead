@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Deals with collisions - specifically player collisions with enemies and the ship
     private void OnCollisionEnter2D(Collision2D hitInfo) {
         if (hitInfo.gameObject.tag == "Enemy")
         {
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Deals with triggers - specifically triggers associated with parts
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Debug.Log("Collision");
@@ -50,11 +52,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Takes an integer and increases the amount of parts the player has in their inventory by this amount.
+    // Also updates the on-screen parts text
     public void ChangeParts(int amount) {
         parts += amount;
         PartText.parts += amount;
     }
 
+    // Takes a float, and decreases the players hp by this amount. Deals with what happens if the players hp hits 0.
+    // Also updates the on-screen health bar
     public void ReduceHp(float amount) {
         hp = hp - amount;
         if (hp < 0f) {
@@ -65,6 +71,8 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(hp);
     }
 
+    // Takes a float, and increases the players hp by this amount. Deals with what happens if the players hp hits its max.
+    // Also updates the on-screen health bar
     public void RestoreHp(float amount) {
         hp = hp + amount;
         if (hp > maxHp) {
@@ -73,11 +81,13 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(hp);
     }
 
+    // Takes a float, sets this value as the players max hp. Sets their current hp to this amount too.
     public void SetMaxHp(float maxHp) {
         this.maxHp = maxHp;
         hp = maxHp;
     }
 
+    // Coroutine that regenerates the players health every second by 10
     IEnumerator RegenHealth() {
         regeningHp = true;
         while(hp < maxHp) {

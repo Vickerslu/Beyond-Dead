@@ -7,11 +7,10 @@ public class Ship : MonoBehaviour
     public static int repairProgress = 0;
     public GameObject ship;
 
-    // Update is called once per frame
+    // Takes an integer and repairs the ship by this amount. Deals with what happens once the ship is fully rebuilt.
     public static void Repair(int amount)
     {
         repairProgress += amount;
-        Debug.Log(repairProgress + " repair progress!");
         if(repairProgress >= 100) {
             SceneManager.LoadScene(3);
         }

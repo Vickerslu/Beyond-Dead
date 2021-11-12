@@ -14,7 +14,7 @@ public class WaveSpawnerBasic : MonoBehaviour
 
     [SerializeField] GameObject enemy;
     [SerializeField] Transform[] spawnPoints;
-    
+
     private float searchCntDwn = 1f;
 
     void Update()
@@ -23,6 +23,7 @@ public class WaveSpawnerBasic : MonoBehaviour
         StartCoroutine(waveSpawner());
     }
 
+    // Occasionally checks if the current wave has ended (enemies still alive) (not constantly running in update for performance reasons)
     bool checkWaveComplete()
     {
         searchCntDwn -= Time.deltaTime;
@@ -37,6 +38,10 @@ public class WaveSpawnerBasic : MonoBehaviour
         return false;
     }
 
+    // Between rounds 1-4, spawn a certain number of enemies. Higher rounds, spawn enemeies using a different formula
+    // Formula makes sure that the amount of enemies increases with the round number.
+    // If the wave is complete, begin spawning another wave of enemy clones, increasing the round number and making the
+    // enemies harder to kill. decrease the time between spawns to make it more intense.
     IEnumerator waveSpawner()
     {
         if (Enumerable.Range(1,4).Contains(waveCnt))

@@ -10,6 +10,7 @@ public class MenuCode : MonoBehaviour
         // pointsText.text = Score.score.ToString() + " Points!";
     }    
     
+    // Resets the main variables and reloads the game
     public void PlayGame()
     {
         Ship.repairProgress = 0;
@@ -17,9 +18,9 @@ public class MenuCode : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     
+    // Quits the game
     public void QuitGame()
     {
-        Debug.Log("QUIT");
         Application.Quit();
     }
 }
