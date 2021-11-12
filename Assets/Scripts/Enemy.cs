@@ -18,8 +18,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        // moveSpeed = UnityEngine.Random.Range(5,5f);
-        moveSpeed = 5;
+        moveSpeed = UnityEngine.Random.Range(5,5f);
         hasDropFunc();
     }
 
@@ -30,8 +29,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void hasDropFunc() {
-        // int rand = UnityEngine.Random.Range(1,5);
-        int rand = 1;
+        int rand = UnityEngine.Random.Range(1,5);
         if(rand == 1) {
             hasDrop = true;
         }
