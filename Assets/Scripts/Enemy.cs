@@ -5,8 +5,8 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private GameObject player;
+    // [SerializeField] private float moveSpeed;
+    // [SerializeField] private GameObject player;
 
     public bool hasDrop;
     public Part part;
@@ -16,14 +16,12 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player");
-        moveSpeed = UnityEngine.Random.Range(5,5f);
         hasDropFunc();
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
+        // transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
     }
 
     // Decides whether the enemy drops something upon death randomly.

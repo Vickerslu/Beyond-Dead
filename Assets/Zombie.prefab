@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5816263427717353441}
   - component: {fileID: 2201679494523500772}
   - component: {fileID: -2688015612760167181}
+  - component: {fileID: 6613626082404482362}
+  - component: {fileID: -7342111598461942956}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -146,9 +148,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ac3bffdb6186a4c8655e6cf1b3ca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  player: {fileID: 948813407175538985, guid: fd5127f17fb48d647b352c2f2cae6fef, type: 3}
   hasDrop: 0
   part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
   maxHp: 150
   hp: 0
+--- !u!195 &6613626082404482362
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5816263427717353452}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 85
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-7342111598461942956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5816263427717353452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157e971f6603c394eba3c9d1e0ebec8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 948813407175538985, guid: fd5127f17fb48d647b352c2f2cae6fef, type: 3}

@@ -12,3 +12,6 @@ Maybe if they can get these materials from them, they could bring them back to t
 Move - WASD
 Aim - Mouse
 Shoot - Left Click
+
+# References
+Pathfinding - https://github.com/h8man/NavMeshPlus
