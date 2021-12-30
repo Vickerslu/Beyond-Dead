@@ -29,15 +29,14 @@ public class Player : MonoBehaviour
 
     // Deals with collisions - specifically player collisions with enemies and the ship
     private void OnCollisionEnter2D(Collision2D hitInfo) {
-        if (hitInfo.gameObject.tag == "Enemy")
-        {
-             ReduceHp(25f);
-        }
+        // if (hitInfo.gameObject.tag == "Enemy")
+        // {
+        //      ReduceHp(25f);
+        // }
         if (hitInfo.gameObject.tag == "Ship") {
             if(parts >= 5) {
                 Ship.Repair(parts);
                 ChangeParts(-parts);
-                Debug.Log("Added parts");
             }
         }
     }
@@ -45,7 +44,6 @@ public class Player : MonoBehaviour
     // Deals with triggers - specifically triggers associated with parts
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log("Collision");
         if (hitInfo.gameObject.tag == "Part") {
             ChangeParts(5);
             Destroy(hitInfo.gameObject);

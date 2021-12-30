@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using System;
 
 public class Enemy : MonoBehaviour
@@ -11,17 +12,25 @@ public class Enemy : MonoBehaviour
     public bool hasDrop;
     public Part part;
 
-    public int maxHp;
-    public int hp;
+    protected int maxHp;
+    protected int hp;
 
-    void Start()
+    [SerializeField] GameObject target;
+    public NavMeshAgent agent;
+
+    protected virtual void Start()
     {
         hasDropFunc();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        agent.speed = UnityEngine.Random.Range(4f,5f);
+        target = GameObject.Find("Player");
     }
 
-    void Update()
+    protected virtual void Update()
     {
-        // transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed*Time.deltaTime);
+        agent.SetDestination(target.transform.position);
     }
 
     // Decides whether the enemy drops something upon death randomly.
@@ -47,10 +56,21 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    protected virtual void OnCollisionEnter2D(Collision2D hitInfo) {
+        if (hitInfo.gameObject.tag == "Player")
+        {
+            Player player = hitInfo.gameObject.GetComponent<Player>();
+            DealDamage(player);
+        }
+    }
+
+    public virtual void DealDamage(Player player) {
+        player.ReduceHp(50f);
+    }
+
     // Takes an integer and uses this integer in a formula to scale up the enemies health.
-    public void IncreaseHealth(int multiplier)
-    {
-        hp = Convert.ToInt32(Math.Floor(150*(multiplier*0.3f)));
+    public virtual void IncreaseHealth(int multiplier) {
+        hp = Convert.ToInt32(Math.Floor(300*(multiplier*0.3f)));
     }
 
     // Takes an integer and reduces the enemies health by this amount.

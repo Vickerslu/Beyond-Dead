@@ -12,7 +12,7 @@ public class WaveSpawnerBasic : MonoBehaviour
     private int enemyCnt = 1;
     public int waveCnt = 0;
 
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject[] enemies;
     [SerializeField] Transform[] spawnPoints;
 
     private float searchCntDwn = 1f;
@@ -60,7 +60,7 @@ public class WaveSpawnerBasic : MonoBehaviour
             for (int i=0; i < enemyCnt; i++)
             {
                 Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Length)];
-                GameObject enemyClone = Instantiate(enemy, randomSpawn.position, Quaternion.identity);
+                GameObject enemyClone = Instantiate(enemies[UnityEngine.Random.Range(0,enemies.Length)], randomSpawn.position, Quaternion.identity);
                 enemyClone.GetComponent<Enemy>().IncreaseHealth(waveCnt);
                 yield return new WaitForSeconds(spawnRate);
             }
