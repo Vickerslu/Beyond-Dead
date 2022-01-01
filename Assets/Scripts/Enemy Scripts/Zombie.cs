@@ -24,6 +24,6 @@ public class Zombie : Enemy
     }
 
     public override void DealDamage(Player player) {
-        player.ReduceHp(30f);
+        player.ReduceHp(40f);
     }
 }
