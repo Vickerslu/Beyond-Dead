@@ -13,6 +13,7 @@ public class MenuCode : MonoBehaviour
     {
         Ship.repairProgress = 0;
         Score.score = 0;
+        PartText.parts = 0;
         SceneManager.LoadScene(1);
     }
     
