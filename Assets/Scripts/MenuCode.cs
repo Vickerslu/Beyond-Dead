@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class MenuCode : MonoBehaviour
 {
-
     public void Start(){
-        // Text pointsText = new Text();
-        // pointsText.text = Score.score.ToString() + " Points!";
+
     }    
     
     // Resets the main variables and reloads the game

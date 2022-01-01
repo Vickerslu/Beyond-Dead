@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -22,6 +23,6 @@ public class SoundManager : MonoBehaviour
     }
 
     public void ChangeMasterVolume(float value){
-        AudioListener.volume = value;
+        AudioListener.volume = value/100;
     }
 }
