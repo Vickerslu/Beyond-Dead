@@ -24,6 +24,6 @@ public class FastZombie : Enemy
     }
 
     public override void DealDamage(Player player) {
-        player.ReduceHp(15f);
+        player.ReduceHp(20f);
     }
 }
