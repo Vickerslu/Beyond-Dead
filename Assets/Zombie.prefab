@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasDrop: 0
-  part: {fileID: 0}
+  part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
   target: {fileID: 0}
   agent: {fileID: 0}
