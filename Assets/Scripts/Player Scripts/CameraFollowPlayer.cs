@@ -20,7 +20,7 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         if (target)
         {
-            // where player is 
+            // where player is
             desiredPosition = new Vector3(
                 target.transform.position.x + offset.x,
                 target.transform.position.y + offset.y,
@@ -28,7 +28,7 @@ public class CameraFollowPlayer : MonoBehaviour
             );
 
             // where camera should be to give smooth movement effect
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime*1.5f);
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime*2.5f);
             transform.position = smoothedPosition;
         }
     }
