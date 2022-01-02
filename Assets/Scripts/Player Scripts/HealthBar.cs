@@ -22,4 +22,9 @@ public class HealthBar : MonoBehaviour
 		slider.value = health;
 	}
 
+	public void ExtendBar() {
+		RectTransform rt = this.GetComponent<RectTransform>();
+		rt.sizeDelta = new Vector2 (rt.rect.width*1.5f, rt.rect.height);
+	}
+
 } 

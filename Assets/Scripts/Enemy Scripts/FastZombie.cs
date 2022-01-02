@@ -9,7 +9,7 @@ public class FastZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        agent.speed = UnityEngine.Random.Range(6f,7f);
+        agent.speed = UnityEngine.Random.Range(6f,8f);
     }
 
     // Update is called once per frame

@@ -79,12 +79,6 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(hp);
     }
 
-    // Takes a float, sets this value as the players max hp. Sets their current hp to this amount too.
-    public void SetMaxHp(float maxHp) {
-        this.maxHp = maxHp;
-        hp = maxHp;
-    }
-
     // Coroutine that regenerates the players health every second by 10
     IEnumerator RegenHealth() {
         regeningHp = true;
@@ -93,5 +87,17 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         regeningHp = false;
+    }
+
+
+    // Perk Methods
+    public void AssignHealthPerk() {
+        Debug.Log("Old Max HP: " + maxHp);
+        healthBar.ExtendBar();
+        maxHp = maxHp*1.5f;
+        Debug.Log("New Max HP: " + maxHp);
+        healthBar.SetMaxHealth(maxHp);
+        healthBar.SetHealth(maxHp);
+        Debug.Log("Perk applied");
     }
 }

@@ -14,7 +14,6 @@ public class Interactable : MonoBehaviour
     {
         if(inRange) {
             if(Keyboard.current.eKey.wasPressedThisFrame) {
-                Debug.Log("E was pressed");
                 interactAction.Invoke();
             }
         }
