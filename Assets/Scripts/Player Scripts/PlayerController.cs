@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCamera;
 
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float sprintSpeed;
+    [SerializeField] public float speed = 10f;
+    [SerializeField] public float sprintSpeed;
     [SerializeField] private float movementVelocity = 5f;
     public bool isSprinting;
 
@@ -31,8 +31,6 @@ public class PlayerController : MonoBehaviour
         sprintSpeed = speed*1.5f;
         mainCamera = Camera.main;
         playerInput.Player.Fire.performed += _ => PlayerShoot();
-        playerInput.Player.SprintStart.performed += _ => SprintPressed();
-        playerInput.Player.SprintFinish.performed += _ => SprintReleased();
     }
 
     //  get mouse pos, create bullet with correct attributes
@@ -44,16 +42,6 @@ public class PlayerController : MonoBehaviour
             GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
             g.SetActive(true);
         }
-    }
-
-    private void SprintPressed() {
-        Debug.Log("Sprint is pressed");
-        isSprinting = true;
-    }
-
-    private void SprintReleased() {
-        Debug.Log("Sprint is released");
-        isSprinting = false;
     }
 
     private void OnEnable(){
