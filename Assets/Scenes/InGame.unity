@@ -492,18 +492,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &229780155 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8021980791579892325, guid: fd5127f17fb48d647b352c2f2cae6fef,
-    type: 3}
-  m_PrefabInstance: {fileID: 1732242343}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229780153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ef84998a45fc8499df56d49c2627a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &429575576
 GameObject:
   m_ObjectHideFlags: 0
@@ -66766,7 +66754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBought: 0
   price: 2500
-  player: {fileID: 229780155}
 --- !u!20 &1419315407 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 364953608301369907, guid: dbc3f728843abcd4cb5e61fb6699cfc3,
@@ -67400,6 +67387,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1420357560}
+    - target: {fileID: 8021980791579892325, guid: fd5127f17fb48d647b352c2f2cae6fef,
+        type: 3}
+      propertyPath: isSprinting
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5127f17fb48d647b352c2f2cae6fef, type: 3}
 --- !u!4 &1732242344 stripped

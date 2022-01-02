@@ -7,17 +7,31 @@ using UnityEngine.InputSystem;
 public class Interactable : MonoBehaviour
 {
     public bool inRange;
+    private InputActions playerInput;
     public UnityEvent interactAction;
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Awake() {
+        playerInput = new InputActions();
+    }
+
+    void Start() {
+        playerInput.Player.Interact.performed += _ => Interact();
+    }
+
+    void OnEnable(){
+        playerInput.Enable();
+    }
+
+    void OnDisable(){
+        playerInput.Disable();
+    }
+
+    void Interact() {
         if(inRange) {
-            if(Keyboard.current.eKey.wasPressedThisFrame) {
-                interactAction.Invoke();
-            }
+            interactAction.Invoke();
         }
     }
+
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.tag == "Player")

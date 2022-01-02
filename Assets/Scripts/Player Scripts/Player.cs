@@ -14,11 +14,11 @@ public class Player : MonoBehaviour
 
     public int parts = 0;
 
-    void Awake() 
+    void Awake()
     {
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
-    }    
+    }
 
     void Update()
     {
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
             hp = 0f;
             SceneManager.LoadScene(2);
         }
-        
+
         healthBar.SetHealth(hp);
     }
 
