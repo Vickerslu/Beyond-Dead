@@ -28,7 +28,7 @@ public class CameraFollowPlayer : MonoBehaviour
             );
 
             // where camera should be to give smooth movement effect
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime*2f);
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime*1.5f);
             transform.position = smoothedPosition;
         }
     }
