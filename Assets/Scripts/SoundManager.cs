@@ -19,6 +19,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlaySound(AudioClip clip) {
+        _effectsScource.volume = 0.1f;
         _effectsScource.PlayOneShot(clip);
     }
 
