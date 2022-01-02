@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948813406402180824}
   - component: {fileID: 948813406402180839}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948813406505290042}
   - component: {fileID: 948813406505290041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right Eye Temp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948813406529326060}
   - component: {fileID: 948813406529326059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left Eye Temp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: -2038372096476869428}
   - component: {fileID: -3560717371864532699}
   - component: {fileID: 8021980791579892325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 948813407221456916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 948813408022414663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

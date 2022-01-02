@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Perk : MonoBehaviour
 {
-    public bool isBought;
+    [SerializeField] protected bool isBought;
     [SerializeField] protected int price;
-    public Player player;
+    protected GameObject playerObject;
+    protected Player player;
+
+
+    protected virtual void Start() {
+        playerObject = GameObject.Find("Player");
+        player = playerObject.GetComponent<Player>();
+    }
 
     public void Buy() {
         if(!isBought && Score.score >= price) {
@@ -17,6 +24,6 @@ public class Perk : MonoBehaviour
     }
 
     protected virtual void ApplyPerk() {
-        Debug.Log("Noooooo not this one ");
+        Debug.Log("Perk Applied");
     }
 }

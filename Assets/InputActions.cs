@@ -57,6 +57,22 @@ public class @InputActionss : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""SprintStart"",
+                    ""type"": ""Button"",
+                    ""id"": ""97fa3b21-5991-41e0-8785-53d4c6237ddf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SprintFinish"",
+                    ""type"": ""Button"",
+                    ""id"": ""ff7a1759-ced1-4e34-b23f-0c903638df48"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -310,6 +326,61 @@ public class @InputActionss : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20b8e393-14e5-4064-b3ba-0999bbc28046"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7dffe01-5805-4187-8890-1494ace32352"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""SprintStart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee2c2fe9-4454-4bfb-8dec-cf14853afb0e"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SprintStart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f1df1977-d0f9-47e7-bd74-09ff360f9f60"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""SprintFinish"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2213854-5fc7-4205-8e73-cc93c241412d"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SprintFinish"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -892,6 +963,8 @@ public class @InputActionss : IInputActionCollection, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_SprintStart = m_Player.FindAction("SprintStart", throwIfNotFound: true);
+        m_Player_SprintFinish = m_Player.FindAction("SprintFinish", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -958,6 +1031,8 @@ public class @InputActionss : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_SprintStart;
+    private readonly InputAction m_Player_SprintFinish;
     public struct PlayerActions
     {
         private @InputActionss m_Wrapper;
@@ -967,6 +1042,8 @@ public class @InputActionss : IInputActionCollection, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @SprintStart => m_Wrapper.m_Player_SprintStart;
+        public InputAction @SprintFinish => m_Wrapper.m_Player_SprintFinish;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -991,6 +1068,12 @@ public class @InputActionss : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @SprintStart.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintStart;
+                @SprintStart.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintStart;
+                @SprintStart.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintStart;
+                @SprintFinish.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintFinish;
+                @SprintFinish.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintFinish;
+                @SprintFinish.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprintFinish;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1010,6 +1093,12 @@ public class @InputActionss : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @SprintStart.started += instance.OnSprintStart;
+                @SprintStart.performed += instance.OnSprintStart;
+                @SprintStart.canceled += instance.OnSprintStart;
+                @SprintFinish.started += instance.OnSprintFinish;
+                @SprintFinish.performed += instance.OnSprintFinish;
+                @SprintFinish.canceled += instance.OnSprintFinish;
             }
         }
     }
@@ -1171,6 +1260,8 @@ public class @InputActionss : IInputActionCollection, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnSprintStart(InputAction.CallbackContext context);
+        void OnSprintFinish(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

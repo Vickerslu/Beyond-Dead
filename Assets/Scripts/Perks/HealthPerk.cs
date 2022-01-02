@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HealthPerk : Perk
 {
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         base.price = 180;
     }
 

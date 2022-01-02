@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public bool hasDrop;
     public Part part;
 
-    protected int maxHp;
+    [SerializeField] protected int maxHp;
     protected int hp;
 
     [SerializeField] GameObject target;

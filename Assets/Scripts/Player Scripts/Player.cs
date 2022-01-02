@@ -92,12 +92,9 @@ public class Player : MonoBehaviour
 
     // Perk Methods
     public void AssignHealthPerk() {
-        Debug.Log("Old Max HP: " + maxHp);
         healthBar.ExtendBar();
         maxHp = maxHp*1.5f;
-        Debug.Log("New Max HP: " + maxHp);
         healthBar.SetMaxHealth(maxHp);
         healthBar.SetHealth(maxHp);
-        Debug.Log("Perk applied");
     }
 }
