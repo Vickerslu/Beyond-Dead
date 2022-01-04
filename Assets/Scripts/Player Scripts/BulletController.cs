@@ -16,7 +16,7 @@ public class BulletController : MonoBehaviour
     // If it hits an enemy, deal damage to that enemy and increase the score. Remove the bullet in this case.
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.gameObject.tag != "Player" && hitInfo.gameObject.tag != "Bullet")
+        if (hitInfo.gameObject.tag != "Player" && hitInfo.gameObject.tag != "Bullet" && hitInfo.gameObject.tag != "Part")
         {
             Enemy enemy = hitInfo.GetComponent<Enemy>();
             if (enemy!= null)
