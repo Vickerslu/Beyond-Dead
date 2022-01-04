@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public int parts = 0;
 
+    public bool isShooting;
+
     void Awake()
     {
         hp = maxHp;
@@ -47,6 +49,10 @@ public class Player : MonoBehaviour
         if (hitInfo.gameObject.tag == "Part") {
             ChangeParts(5);
             Destroy(hitInfo.gameObject);
+        }
+        if (hitInfo.gameObject.tag == "Room") {
+            Transform parent = hitInfo.gameObject.transform;
+            parent.GetChild(0).gameObject.SetActive(true);
         }
     }
 

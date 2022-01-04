@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5748935111638935056}
   - component: {fileID: 5748935111638935070}
   - component: {fileID: 5748935111638935057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab58736eb43cf644f92063c17daa8007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 180
+  price: 500
 --- !u!1 &5748935111688414808
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 5748935111688414811}
   - component: {fileID: 5748935111688414813}
   - component: {fileID: 5748935111688414810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InteractableSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}

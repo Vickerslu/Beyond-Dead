@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5696233374304328380}
   - component: {fileID: 4619088046567110867}
   - component: {fileID: 6807362889895955122}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8161248340126416911}
   - component: {fileID: 5618338317144601768}
   - component: {fileID: 6258290543223018380}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stamina bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 7368012250073900047}
   - component: {fileID: 7368012250073900045}
   - component: {fileID: 7368012250073900046}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7368012250344807154}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 7368012250357015152}
   - component: {fileID: 7368012250357015166}
   - component: {fileID: 7368012250357015167}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 7368012250502832165}
   - component: {fileID: 7368012250502832163}
   - component: {fileID: 7368012250502832164}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 7368012250599281024}
   - component: {fileID: 7368012250599281025}
   - component: {fileID: 7368012250599281026}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 7368012251281450876}
   - component: {fileID: 2798484527073656064}
   - component: {fileID: 7368012251281450877}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7368012249511143023}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,12 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public Player player;
+
     private InputActions playerInput;
     private Vector2 movement;
     private Vector3 mousePositionInWorld;
 
     private Rigidbody2D rb;
     private Camera mainCamera;
+
+    private Coroutine shootingCoroutine;
+    private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
 
     [SerializeField] public float speed = 10f;
     [SerializeField] public float sprintSpeed;
@@ -28,19 +33,25 @@ public class PlayerController : MonoBehaviour
 
     // sets main camera to variable, calls PlayerShoot when user clicks
     private void Start(){
+        // Cursor.visible = false;
         sprintSpeed = speed*1.5f;
         mainCamera = Camera.main;
-        playerInput.Player.Fire.performed += _ => PlayerShoot();
+        GameObject playerObject = GameObject.Find("Player");
+        player = playerObject.GetComponent<Player>();
     }
 
     //  get mouse pos, create bullet with correct attributes
-    private void PlayerShoot(){
-        if (!PauseMenu.GameIsPaused){
-            Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
-            mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
+    private IEnumerator PlayerShoot(){
+        // yield return new WaitForSeconds(0.1f);
+        while(true) {
+            if (!PauseMenu.GameIsPaused){
+                Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
+                mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
 
-            GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
-            g.SetActive(true);
+                GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+                g.SetActive(true);
+                yield return regenTick;
+            }
         }
     }
 
@@ -71,6 +82,21 @@ public class PlayerController : MonoBehaviour
         }
         else {
             rb.AddForce(movement * speed * Time.deltaTime);
+        }
+
+        if(playerInput.Player.FireStart.triggered) {
+            player.isShooting = true;
+            if(shootingCoroutine != null) {
+                StopCoroutine(shootingCoroutine);
+            }
+            shootingCoroutine = StartCoroutine(PlayerShoot());
+        }
+        if(playerInput.Player.FireFinish.triggered) {
+            player.isShooting = false;
+            if(shootingCoroutine != null) {
+                StopCoroutine(shootingCoroutine);
+            }
+            // shootingCoroutine = StartCoroutine(RegenStamina(regenAmount));
         }
     }
 }

@@ -16,11 +16,10 @@ public class StaminaBar : MonoBehaviour
     [SerializeField] float regenAmount;
     [SerializeField] float useAmount;
 
-    private WaitForSeconds regenTick = new WaitForSeconds(0.01f);
+    private WaitForSeconds regenTick = new WaitForSeconds(0.0025f);
     private Coroutine regen;
 
     public PlayerController player;
-
 
     // Start is called before the first frame update
     void Start()

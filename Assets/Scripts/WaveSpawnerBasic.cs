@@ -53,7 +53,7 @@ public class WaveSpawnerBasic : MonoBehaviour
             enemyCnt = Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)));
 
         }
-        
+
         while(checkWaveComplete())
         {
             waveCnt += 1;
