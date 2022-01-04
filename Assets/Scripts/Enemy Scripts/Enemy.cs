@@ -51,6 +51,7 @@ public class Enemy : MonoBehaviour
             if(hasDrop) {
                 Instantiate(part, transform.position, Quaternion.identity);
             }
+            
             Destroy(gameObject);
             Score.score += 50;
         }
