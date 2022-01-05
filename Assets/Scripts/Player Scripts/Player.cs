@@ -10,11 +10,15 @@ public class Player : MonoBehaviour
     public float maxHp = 100f;
 
     public HealthBar healthBar;
+    public StaminaBar staminaBar;
     public bool regeningHp = false;
+    public float hpRegenRate = 10f;
 
     public int parts = 0;
 
     public bool isShooting;
+
+    public bool hasDoubleTapPerk = false;
 
     void Awake()
     {
@@ -89,7 +93,7 @@ public class Player : MonoBehaviour
     IEnumerator RegenHealth() {
         regeningHp = true;
         while(hp < maxHp) {
-            RestoreHp(10f);
+            RestoreHp(hpRegenRate);
             yield return new WaitForSeconds(1);
         }
         regeningHp = false;
@@ -102,5 +106,17 @@ public class Player : MonoBehaviour
         maxHp = maxHp*1.5f;
         healthBar.SetMaxHealth(maxHp);
         healthBar.SetHealth(maxHp);
+    }
+
+    public void AssignStaminaPerk() {
+        staminaBar.ExtendBar();
+    }
+
+    public void AssignDoubleTapPerk() {
+        hasDoubleTapPerk = true;
+    }
+
+    public void AssignHpRegenPerk() {
+        hpRegenRate = hpRegenRate*1.5f;
     }
 }

@@ -785,6 +785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0cfdd9cc9768c41a8fed9d5c487908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ammo: 30
   speed: 80
   sprintSpeed: 0
   movementVelocity: 10
@@ -806,8 +808,11 @@ MonoBehaviour:
   hp: 100
   maxHp: 100
   healthBar: {fileID: 7368012250357015167}
+  staminaBar: {fileID: 6258290543223018380}
   regeningHp: 0
   parts: 0
+  isShooting: 0
+  hasDoubleTapPerk: 0
 --- !u!58 &2798484527073656064
 CircleCollider2D:
   m_ObjectHideFlags: 0

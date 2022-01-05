@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject target;
     public NavMeshAgent agent;
 
+    public static int dropRate = 5;
+
     protected virtual void Start()
     {
         hasDropFunc();
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour
         agent.updateUpAxis = false;
         agent.speed = UnityEngine.Random.Range(4f,5f);
         target = GameObject.Find("Player");
+        Debug.Log("Drop rate: " + dropRate);
     }
 
     protected virtual void Update()
@@ -35,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     // Decides whether the enemy drops something upon death randomly.
     private void hasDropFunc() {
-        int rand = UnityEngine.Random.Range(1,5);
+        int rand = UnityEngine.Random.Range(1,dropRate);
         if(rand == 1) {
             hasDrop = true;
         }

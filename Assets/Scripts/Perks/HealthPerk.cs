@@ -6,11 +6,10 @@ public class HealthPerk : Perk
 {
     protected override void Start() {
         base.Start();
-        base.price = 180;
+        base.price = 2500;
     }
 
     protected override void ApplyPerk() {
-        Debug.Log("Appliedddddddd");
         base.player.AssignHealthPerk();
     }
 }

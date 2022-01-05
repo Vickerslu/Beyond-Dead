@@ -8,11 +8,12 @@ public class Perk : MonoBehaviour
     [SerializeField] protected int price;
     protected GameObject playerObject;
     protected Player player;
-
+    protected PlayerController playerController;
 
     protected virtual void Start() {
         playerObject = GameObject.Find("Player");
         player = playerObject.GetComponent<Player>();
+        playerController = playerObject.GetComponent<PlayerController>();
     }
 
     public void Buy() {

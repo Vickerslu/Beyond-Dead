@@ -14,8 +14,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCamera;
 
+    public int ammo = 30;
     private Coroutine shootingCoroutine;
-    private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
+    private float regenTickTime = 0.5f;
+    private WaitForSeconds regenTick;
 
     [SerializeField] public float speed = 10f;
     [SerializeField] public float sprintSpeed;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     // instantiate player input into variable and set rb
     private void Awake(){
+        regenTick = new WaitForSeconds(regenTickTime);
         playerInput = new InputActions();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -43,13 +46,19 @@ public class PlayerController : MonoBehaviour
     //  get mouse pos, create bullet with correct attributes
     private IEnumerator PlayerShoot(){
         // yield return new WaitForSeconds(0.1f);
-        while(true) {
+        while(ammo - 1 >= 0) {
             if (!PauseMenu.GameIsPaused){
                 Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
                 mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
-
+                ammo -= 1;
                 GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
                 g.SetActive(true);
+                Debug.Log("First bullet fired");
+                if(player.hasDoubleTapPerk) {
+                    GameObject g2 = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+                    g2.SetActive(true);
+                    Debug.Log("Second bullet fired");
+                }
                 yield return regenTick;
             }
         }
@@ -98,5 +107,10 @@ public class PlayerController : MonoBehaviour
             }
             // shootingCoroutine = StartCoroutine(RegenStamina(regenAmount));
         }
+    }
+
+    public void AssignSpeedPerk() {
+        speed = speed*1.25f;
+        sprintSpeed = speed*1.25f;
     }
 }

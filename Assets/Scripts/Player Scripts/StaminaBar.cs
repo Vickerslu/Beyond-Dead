@@ -10,7 +10,7 @@ public class StaminaBar : MonoBehaviour
 
     public Slider staminaBar;
 
-    private int maxStamina = 100;
+    private float maxStamina = 100f;
     private float stamina;
 
     [SerializeField] float regenAmount;
@@ -78,5 +78,13 @@ public class StaminaBar : MonoBehaviour
             yield return regenTick;
         }
         player.isSprinting = false;
+    }
+
+    public void ExtendBar() {
+        RectTransform rt = this.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2 (rt.rect.width*1.5f, rt.rect.height);
+        maxStamina = maxStamina*2f;
+        staminaBar.maxValue = maxStamina;
+        staminaBar.value = maxStamina;
     }
 }
