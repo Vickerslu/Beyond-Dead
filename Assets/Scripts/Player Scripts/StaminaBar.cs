@@ -33,7 +33,8 @@ public class StaminaBar : MonoBehaviour
     {
         playerInput = new InputActions();
         stamina = maxStamina;
-        staminaBar.value = maxStamina;
+        // staminaBar.value = maxStamina;
+        staminaBar.value = 80f;
     }
 
     void Update()
