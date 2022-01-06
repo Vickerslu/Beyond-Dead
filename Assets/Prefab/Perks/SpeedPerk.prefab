@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3398456481891804500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687481361198824094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f9
+  m_ShapePath:
+  - {x: -0.877543, y: -1.7710886, z: 0}
+  - {x: -0.8755522, y: 0.98409367, z: 0}
+  - {x: -0.6677666, y: 1.3203077, z: 0}
+  - {x: 0.004682541, y: 1.7765427, z: 0}
+  - {x: 0.6698742, y: 1.3187599, z: 0}
+  - {x: 0.8770995, y: 0.98462677, z: 0}
+  - {x: 0.87797546, y: -1.7720337, z: 0}
+  m_ShapePathHash: -1245407625
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 72184
 --- !u!114 &6745212567525865258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +99,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpeedPerk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.762846
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.057787
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0040946007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23306942
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}

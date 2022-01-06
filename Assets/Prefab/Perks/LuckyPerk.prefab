@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5748999504628781543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842431528896618292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f9
+  m_ShapePath:
+  - {x: -0.7515278, y: -1.7708187, z: 0}
+  - {x: -0.74951744, y: -1.4775248, z: 0}
+  - {x: -0.5397396, y: 0.81355095, z: 0}
+  - {x: -0.3331585, y: 1.1482468, z: 0}
+  - {x: 0.3763914, y: 1.147686, z: 0}
+  - {x: 0.5842352, y: 0.81443024, z: 0}
+  - {x: 0.7925701, y: -1.4772148, z: 0}
+  - {x: 0.7920475, y: -1.7711782, z: 0}
+  m_ShapePathHash: -1935600907
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 72224
 --- !u!114 &6646412799200387702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +90,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LuckyPerk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.904171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.31168556
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}

@@ -45,7 +45,7 @@ MonoBehaviour:
   - {x: 0.5421505, y: -1.7700503, z: 0}
   m_ShapePathHash: -537725779
   m_Mesh: {fileID: 0}
-  m_InstanceId: -121596
+  m_InstanceId: 72372
 --- !u!1001 &1111194829519679262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,12 +71,12 @@ PrefabInstance:
     - target: {fileID: 3758753012205439970, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00050545
+      value: 11.15
       objectReference: {fileID: 0}
     - target: {fileID: 3758753012205439970, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -924
+      value: -1066
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122098098123, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
