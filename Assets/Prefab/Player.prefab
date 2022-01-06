@@ -647,7 +647,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 4619250276654663014, guid: d5bc93f18e9be9d4cbc5e2cda5e750e7,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -810,6 +810,7 @@ MonoBehaviour:
   healthBar: {fileID: 7368012250357015167}
   staminaBar: {fileID: 6258290543223018380}
   regeningHp: 0
+  hpRegenRate: 10
   parts: 0
   isShooting: 0
   hasDoubleTapPerk: 0
