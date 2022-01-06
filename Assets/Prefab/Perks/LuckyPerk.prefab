@@ -31,25 +31,86 @@ PrefabInstance:
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Buy
       objectReference: {fileID: 0}
+    - target: {fileID: 3758753012205439970, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 74.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758753012205439970, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758753012205439970, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122098098123, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1680
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122098098123, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2320
+      objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393536, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Name
       value: LuckyPerk
       objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393537, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89dad9e25b26a2b4696c435f749cbb3b,
+        type: 3}
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.08344847
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4056604
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393539, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
@@ -105,6 +166,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919123143763386, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 628.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919123143763386, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 206.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919123143763386, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00020218
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190919123143763386, guid: 74ce11282d6b0704b946b636f6bf3ca0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 865.3
       objectReference: {fileID: 0}
     - target: {fileID: 6190919123143763387, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
