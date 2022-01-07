@@ -69,6 +69,5 @@ public class WaveSpawnerBasic : MonoBehaviour
                 spawnRate -= 0.1f;
             }
         }
-
     }
 }
