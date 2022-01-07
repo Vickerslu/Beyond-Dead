@@ -37,6 +37,15 @@ public class Enemy : MonoBehaviour
     protected virtual void Update()
     {
         agent.SetDestination(target.transform.position);
+        //amimation
+        if(agent.speed > 0.01) {
+            animator.SetFloat ("Speed", (float)1.00);
+            animator.SetFloat ("Horizontal", (float)target.transform.position.x);
+            animator.SetFloat ("Vertical", (float)target.transform.position.y);
+        }
+        else {
+            animator.SetFloat ("Speed", (float)0.00);
+        }
     }
 
     // Decides whether the enemy drops something upon death randomly.
