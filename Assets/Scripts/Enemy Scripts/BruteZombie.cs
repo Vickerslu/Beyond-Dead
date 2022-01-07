@@ -9,7 +9,7 @@ public class BruteZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        agent.speed = UnityEngine.Random.Range(1f,2f);
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(1f,2f);
     }
 
     // Update is called once per frame

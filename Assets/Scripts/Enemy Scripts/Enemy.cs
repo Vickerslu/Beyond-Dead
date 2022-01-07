@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
 
     public static int dropRate = 5;
+    public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
     protected virtual void Start()
     {
@@ -26,7 +27,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.speed = UnityEngine.Random.Range(4f,5f);
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(4f,5f);
         target = GameObject.Find("Player");
         Debug.Log("Drop rate: " + dropRate);
     }

@@ -9,7 +9,8 @@ public class Zombie : Enemy
     protected override void Start()
     {
         base.Start();
-        agent.speed = UnityEngine.Random.Range(3f,4f);
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(3f,4f);
+        Debug.Log(speedMultiplier);
     }
 
     // Update is called once per frame

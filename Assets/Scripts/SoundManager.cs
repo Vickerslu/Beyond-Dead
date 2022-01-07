@@ -19,11 +19,13 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlaySound(AudioClip clip) {
-        _effectsScource.volume = 0.1f;  // bullet sound too loud had to hard code the volume
         _effectsScource.PlayOneShot(clip);
     }
 
     public void ChangeMasterVolume(float value){
-        AudioListener.volume = value/100;
+        AudioListener.volume = value/100;  //divide by 100 because sliders range is 0-100
+    }
+    public void ChangeEffectsVolume(float value){
+        _effectsScource.volume = value/100;
     }
 }
