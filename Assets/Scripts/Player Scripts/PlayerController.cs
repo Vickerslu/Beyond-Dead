@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private float regenTickTime = 0.5f;
     private WaitForSeconds regenTick;
 
+    private Transform aimTransform;
+
     [SerializeField] public float speed = 10f;
     [SerializeField] public float sprintSpeed;
     [SerializeField] private float movementVelocity = 5f;
@@ -34,6 +36,9 @@ public class PlayerController : MonoBehaviour
         regenTick = new WaitForSeconds(regenTickTime);
         playerInput = new InputActions();
         rb = GetComponent<Rigidbody2D>();
+        //gun aim
+        aimTransform = transform.Find("Aim");
+
     }
 
     // sets main camera to variable, calls PlayerShoot when user clicks
@@ -85,6 +90,17 @@ public class PlayerController : MonoBehaviour
             // quaternion.euler rotatoin https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
             float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+            
+            // gun aim
+            aimTransform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+            Vector3 aimlocalScale = Vector3.one;
+            if (angle > 90 || angle < -90) {
+                aimlocalScale.y = -1f;
+            }
+            else {
+                aimlocalScale.y = +1f;
+            }
+            aimTransform.localScale = aimlocalScale;
         }
 
         //movement
