@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public Player player;
 
+    public Animator animator;
+
     private InputActions playerInput;
     private Vector2 movement;
     private Vector3 mousePositionInWorld;
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         mainCamera = Camera.main;
         GameObject playerObject = GameObject.Find("Player");
         player = playerObject.GetComponent<Player>();
+        animator = GetComponent<Animator> ();
     }
 
     //  get mouse pos, create bullet with correct attributes
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour
             Vector3 targetDirection = mousePositionInWorld - transform.position;
             // quaternion.euler rotatoin https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
             float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+            //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         }
 
         //movement
@@ -107,6 +110,17 @@ public class PlayerController : MonoBehaviour
             }
             // shootingCoroutine = StartCoroutine(RegenStamina(regenAmount));
         }
+
+        //amimation
+        if(speed > 0.01) {
+            animator.SetFloat ("Speed", (float)1.00);
+            animator.SetFloat ("Horizontal", movement.x);
+            animator.SetFloat ("Vertical", movement.y);
+        }
+        else {
+            animator.SetFloat ("Speed", (float)0.00);
+        }
+        
     }
 
     public void AssignSpeedPerk() {
