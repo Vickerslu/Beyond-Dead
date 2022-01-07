@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     // [SerializeField] private float moveSpeed;
     // [SerializeField] private GameObject player;
 
+    public Animator animator;
+
     public bool hasDrop;
     public Part part;
 
