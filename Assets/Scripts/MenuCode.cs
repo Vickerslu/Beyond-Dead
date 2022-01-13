@@ -14,7 +14,15 @@ public class MenuCode : MonoBehaviour
         Ship.repairProgress = 0;
         Score.score = 0;
         PartText.parts = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("InGame");
+    }
+
+    public void PlayTutorial()
+    {
+        Ship.repairProgress = 0;
+        Score.score = 10000;
+        PartText.parts = 0;
+        SceneManager.LoadScene("Tutorial");
     }
     
     // Quits the game

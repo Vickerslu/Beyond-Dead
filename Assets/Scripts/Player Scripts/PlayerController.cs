@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCamera;
 
-    public int ammo = 30;
+    public static int ammo = 30;
     private Coroutine shootingCoroutine;
     private float regenTickTime = 0.5f;
     private WaitForSeconds regenTick;
