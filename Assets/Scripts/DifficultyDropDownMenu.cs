@@ -8,13 +8,13 @@ public class DifficultyDropDownMenu : MonoBehaviour
     public void HandleInputData(int val)
     {
         if (val == 0){
-            // difficulty set to easy
-        } 
+            WaveSpawnerBasic.diffMulti = 0.5f;
+        }
         if (val == 1){
-            // difficulty set to medium
-        } 
+            WaveSpawnerBasic.diffMulti = 1f;
+        }
         if (val == 2){
-            // difficulty set to hard
-        } 
+            WaveSpawnerBasic.diffMulti = 1.5f;
+        }
     }
 }

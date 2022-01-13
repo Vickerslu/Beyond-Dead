@@ -8,6 +8,7 @@ using System.Linq;
 public class WaveSpawnerBasic : MonoBehaviour
 {
     [SerializeField] private Text waveCntTxt;
+    [SerializeField] public static float diffMulti = 1f;
     public float spawnRate = 2f;
     private int enemyCnt = 1;
     public int waveCnt = 0;
@@ -46,11 +47,11 @@ public class WaveSpawnerBasic : MonoBehaviour
     {
         if (Enumerable.Range(1,4).Contains(waveCnt))
             {
-                enemyCnt = Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/2+5) )));
+                enemyCnt = Convert.ToInt32(Math.Floor(diffMulti * Convert.ToInt32(Math.Floor((Double) (waveCnt*(waveCnt/2+5) )))));
             }
         else
         {
-            enemyCnt = Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)));
+            enemyCnt = Convert.ToInt32(Math.Floor(diffMulti * Convert.ToInt32(Math.Floor(waveCnt*(waveCnt*0.15f)))));
 
         }
 
