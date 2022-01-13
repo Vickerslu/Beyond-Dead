@@ -45,7 +45,7 @@ MonoBehaviour:
   - {x: 0.5421505, y: -1.7700503, z: 0}
   m_ShapePathHash: -537725779
   m_Mesh: {fileID: 0}
-  m_InstanceId: 72372
+  m_InstanceId: 53572
 --- !u!1001 &1111194829519679262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,17 +137,17 @@ PrefabInstance:
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.67058825
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.67058825
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393538, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.67058825
       objectReference: {fileID: 0}
     - target: {fileID: 6190919122529393539, guid: 74ce11282d6b0704b946b636f6bf3ca0,
         type: 3}
