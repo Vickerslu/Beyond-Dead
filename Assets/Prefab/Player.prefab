@@ -731,7 +731,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: -2311659948842064771, guid: 0e03a680fe8dbf644a27c5cb08c56814,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -871,7 +871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   animator: {fileID: 0}
-  ammo: 30
   speed: 80
   sprintSpeed: 0
   movementVelocity: 10
