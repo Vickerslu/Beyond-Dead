@@ -119,4 +119,8 @@ public class Player : MonoBehaviour
     public void AssignHpRegenPerk() {
         hpRegenRate = hpRegenRate*1.5f;
     }
+
+    public void BuyBullets(){
+        PlayerController.ammo += 20;
+    }
 }
