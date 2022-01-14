@@ -12,7 +12,7 @@ public class Ship : MonoBehaviour
     {
         repairProgress += amount;
         if(repairProgress >= 100) {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("GameWin");
         }
     }
 }
