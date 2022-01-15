@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     // [SerializeField] private GameObject player;
 
     public Animator animator;
+    [SerializeField] public AudioClip ZombieAudio;
 
     public bool hasDrop;
     public Part part;
@@ -77,6 +78,7 @@ public class Enemy : MonoBehaviour
         {
             Player player = hitInfo.gameObject.GetComponent<Player>();
             DealDamage(player);
+            SoundManager.Instance.PlaySound(ZombieAudio);
         }
     }
 
