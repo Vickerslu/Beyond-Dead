@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 983548145}
-  ZombieAudio: {fileID: 8300000, guid: 31acc395360ca09489393a3abdfb217f, type: 3}
   hasDrop: 0
   part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
   maxHp: 0
