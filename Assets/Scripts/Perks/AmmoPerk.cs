@@ -12,4 +12,11 @@ public class AmmoPerk : Perk
     protected override void ApplyPerk() {
         base.player.BuyBullets();
     }
+
+    protected override void Buy() {
+        if(Score.score >= price) {
+            Score.score -= price;
+            ApplyPerk();
+        }
+    }
 }
