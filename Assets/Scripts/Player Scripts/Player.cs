@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float hp;
     public float maxHp = 100f;
 
-    [SerializeField] public AudioClip zombieSound;
+    [SerializeField] public AudioClip[] zombieSound;
 
     public HealthBar healthBar;
     public StaminaBar staminaBar;
@@ -78,7 +78,8 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
         healthBar.SetHealth(hp);
-        SoundManager.Instance.PlaySound(zombieSound);
+        //plays random sound when player is hit from array of sounds
+        SoundManager.Instance.PlaySound(zombieSound[UnityEngine.Random.Range(0,zombieSound.Length)]);
     }
 
     // Takes a float, and increases the players hp by this amount. Deals with what happens if the players hp hits its max.
