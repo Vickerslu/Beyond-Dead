@@ -16,7 +16,7 @@ public class Perk : MonoBehaviour
         playerController = playerObject.GetComponent<PlayerController>();
     }
 
-    protected virtual void Buy() {
+    public void Buy() {
         if(!isBought && Score.score >= price) {
             isBought = true;
             Score.score -= price;

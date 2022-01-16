@@ -29,7 +29,7 @@ PrefabInstance:
     - target: {fileID: 1981817517650407291, guid: 2a524578f49d2b5408991f172252b468,
         type: 3}
       propertyPath: m_Name
-      value: Zombie Variant
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 1981817517650407293, guid: 2a524578f49d2b5408991f172252b468,
         type: 3}
