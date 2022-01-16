@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-    public bool inRange;
+    public static bool inRange;
     private InputActions playerInput;
     public UnityEvent interactAction;
 
