@@ -891,6 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   maxHp: 100
+  zombieSound: {fileID: 8300000, guid: ec3975aadd5ada04bbb285b52c2218fc, type: 3}
   healthBar: {fileID: 7368012250357015167}
   staminaBar: {fileID: 6258290543223018380}
   regeningHp: 0

@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public float hp;
     public float maxHp = 100f;
 
+    [SerializeField] public AudioClip zombieSound;
+
     public HealthBar healthBar;
     public StaminaBar staminaBar;
     public bool regeningHp = false;
@@ -71,12 +73,12 @@ public class Player : MonoBehaviour
     // Also updates the on-screen health bar
     public void ReduceHp(float amount) {
         hp = hp - amount;
-        if (hp < 0f) {
+        if (hp < 1f) {
             hp = 0f;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("GameOver");
         }
-
         healthBar.SetHealth(hp);
+        SoundManager.Instance.PlaySound(zombieSound);
     }
 
     // Takes a float, and increases the players hp by this amount. Deals with what happens if the players hp hits its max.
