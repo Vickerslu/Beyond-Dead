@@ -65601,8 +65601,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -85, y: -53, z: 0}
-  m_Size: {x: 170, y: 101, z: 1}
+  m_Origin: {x: -85, y: -43, z: 0}
+  m_Size: {x: 141, y: 91, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -105339,8 +105339,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -86, y: -60, z: 0}
-  m_Size: {x: 161, y: 113, z: 1}
+  m_Origin: {x: -86, y: -46, z: 0}
+  m_Size: {x: 143, y: 98, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
