@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
         agent.updateUpAxis = false;
         agent.speed = speedMultiplier * UnityEngine.Random.Range(4f,5f);
         target = GameObject.Find("Player");
-        Debug.Log("Drop rate: " + dropRate);
     }
 
     protected virtual void Update()

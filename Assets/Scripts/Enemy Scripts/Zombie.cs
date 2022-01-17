@@ -10,7 +10,6 @@ public class Zombie : Enemy
     {
         base.Start();
         agent.speed = speedMultiplier * UnityEngine.Random.Range(3f,4f);
-        Debug.Log(speedMultiplier);
     }
 
     // Update is called once per frame

@@ -14,9 +14,18 @@ public class WaveSpawnerBasic : MonoBehaviour
     public int waveCnt = 0;
 
     [SerializeField] GameObject[] enemies;
-    [SerializeField] Transform[] spawnPoints;
+    public List<Transform> spawnPoints;
 
     private float searchCntDwn = 1f;
+
+    void Start()
+    {
+        // GameObject firstSpawn = GameObject.Find("Testrrr");
+        // Transform firstSpawnTransform = firstSpawn.transform;
+        // Debug.Log(firstSpawnTransform);
+        // spawnPoints.Add(firstSpawnTransform);
+        // Debug.Log(spawnPoints);
+    }
 
     void Update()
     {
@@ -60,7 +69,7 @@ public class WaveSpawnerBasic : MonoBehaviour
             waveCnt += 1;
             for (int i=0; i < enemyCnt; i++)
             {
-                Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Length)];
+                Transform randomSpawn  = spawnPoints[UnityEngine.Random.Range(0,spawnPoints.Count)];
                 GameObject enemyClone = Instantiate(enemies[UnityEngine.Random.Range(0,enemies.Length)], randomSpawn.position, Quaternion.identity);
                 enemyClone.GetComponent<Enemy>().IncreaseHealth(waveCnt);
                 yield return new WaitForSeconds(spawnRate);

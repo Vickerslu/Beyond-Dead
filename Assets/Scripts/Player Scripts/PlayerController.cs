@@ -61,11 +61,9 @@ public class PlayerController : MonoBehaviour
                 ammo -= 1;
                 GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
                 g.SetActive(true);
-                Debug.Log("First bullet fired");
                 if(player.hasDoubleTapPerk) {
                     GameObject g2 = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
                     g2.SetActive(true);
-                    Debug.Log("Second bullet fired");
                 }
                 yield return regenTick;
             }
@@ -90,7 +88,7 @@ public class PlayerController : MonoBehaviour
             // quaternion.euler rotatoin https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
             float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-            
+
             // gun aim
             aimTransform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
             Vector3 aimlocalScale = Vector3.one;
@@ -136,7 +134,7 @@ public class PlayerController : MonoBehaviour
         else {
             animator.SetFloat ("Speed", (float)0.00);
         }
-        
+
     }
 
     public void AssignSpeedPerk() {
