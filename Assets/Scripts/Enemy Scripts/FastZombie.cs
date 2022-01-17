@@ -9,9 +9,9 @@ public class FastZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        // base.maxHp = 75;
-        // base.hp = base.maxHp;
-        agent.speed = speedMultiplier * UnityEngine.Random.Range(7f,9f);
+        knockbackPower = 0.75f;
+        knockbackDuration = 3f;
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(7f,8f);
     }
 
     public override void IncreaseHealth(int multiplier) {

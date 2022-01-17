@@ -9,9 +9,9 @@ public class BruteZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        // base.maxHp = 300;
-        // base.hp = base.maxHp;
-        agent.speed = speedMultiplier * UnityEngine.Random.Range(1f,2f);
+        knockbackPower = 1.5f;
+        knockbackDuration = 3f;
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(3f,4f);
     }
 
     public override void IncreaseHealth(int multiplier) {

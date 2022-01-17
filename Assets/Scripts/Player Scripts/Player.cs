@@ -20,10 +20,14 @@ public class Player : MonoBehaviour
 
     public bool isShooting;
 
+    private bool isKnockedBack;
+    private Rigidbody2D rb;
+
     public bool hasDoubleTapPerk = false;
 
     void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
     }
@@ -102,6 +106,18 @@ public class Player : MonoBehaviour
         regeningHp = false;
     }
 
+    public void Knockback(float duration, float power, Transform obj) {
+        if(!isKnockedBack) {
+            isKnockedBack = true;
+            float timer = 0;
+            while(duration > timer) {
+                timer += Time.deltaTime;
+                Vector2 direction = (obj.transform.position - this.transform.position).normalized;
+                rb.AddForce(-direction * power);
+            }
+            isKnockedBack = false;
+        }
+    }
 
     // Perk Methods
     public void AssignHealthPerk() {

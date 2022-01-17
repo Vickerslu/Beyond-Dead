@@ -23,15 +23,18 @@ public class Enemy : MonoBehaviour
     public static int dropRate = 100;
     public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
+    protected float knockbackPower;
+    protected float knockbackDuration;
+
     protected virtual void Start()
     {
-        // maxHp = 150;
-        // hp = maxHp;
+        knockbackPower = 1f;
+        knockbackDuration = 3f;
         hasDropFunc();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.speed = speedMultiplier * UnityEngine.Random.Range(4f,5f);
+        agent.speed = speedMultiplier * UnityEngine.Random.Range(5f,6f);
         target = GameObject.Find("Player");
     }
 
@@ -85,6 +88,7 @@ public class Enemy : MonoBehaviour
         if (hitInfo.gameObject.tag == "Player")
         {
             Player player = hitInfo.gameObject.GetComponent<Player>();
+            player.Knockback(knockbackDuration, knockbackPower, this.transform);
             DealDamage(player);
         }
     }
