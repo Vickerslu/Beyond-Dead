@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public StaminaBar staminaBar;
     public bool regeningHp = false;
-    public float hpRegenRate = 10f;
+    public float hpRegenRate = 5f;
 
     public int parts = 0;
 
@@ -121,9 +121,5 @@ public class Player : MonoBehaviour
 
     public void AssignHpRegenPerk() {
         hpRegenRate = hpRegenRate*1.5f;
-    }
-
-    public void BuyBullets(){
-        PlayerController.ammo += 20;
     }
 }

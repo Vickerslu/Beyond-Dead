@@ -6,13 +6,13 @@ public class MenuCode : MonoBehaviour
 {
     public void Start(){
 
-    }    
-    
+    }
+
     // Resets the main variables and reloads the game
     public void PlayGame()
     {
         Ship.repairProgress = 0;
-        Score.score = 0;
+        Score.score = 10000000; // CHANGE
         PartText.parts = 0;
         SceneManager.LoadScene("InGame");
     }
@@ -24,7 +24,7 @@ public class MenuCode : MonoBehaviour
         PartText.parts = 0;
         SceneManager.LoadScene("Tutorial");
     }
-    
+
     // Quits the game
     public void QuitGame()
     {

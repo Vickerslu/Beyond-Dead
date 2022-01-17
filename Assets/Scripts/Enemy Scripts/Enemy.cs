@@ -14,17 +14,19 @@ public class Enemy : MonoBehaviour
     public bool hasDrop;
     public Part part;
 
-    [SerializeField] protected int maxHp;
-    protected int hp;
+    public int maxHp;
+    public int hp;
 
     [SerializeField] GameObject target;
     public NavMeshAgent agent;
 
-    public static int dropRate = 5;
+    public static int dropRate = 100;
     public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
     protected virtual void Start()
     {
+        // maxHp = 150;
+        // hp = maxHp;
         hasDropFunc();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -65,9 +67,17 @@ public class Enemy : MonoBehaviour
             if(hasDrop) {
                 Instantiate(part, transform.position, Quaternion.identity);
             }
-
             Destroy(gameObject);
-            Score.score += 50;
+            Score.score += 5;
+        }
+    }
+
+    // Takes an integer and reduces the enemies health by this amount.
+    public void ReduceHp(int amount) {
+        hp = hp - amount;
+        Debug.Log("Damage Taken: " + amount + "Hp: " + hp);
+        if (hp < 0) {
+            hp = 0;
         }
     }
 
@@ -80,27 +90,13 @@ public class Enemy : MonoBehaviour
     }
 
     public virtual void DealDamage(Player player) {
-        player.ReduceHp(50f);
+        player.ReduceHp(25f);
     }
 
     // Takes an integer and uses this integer in a formula to scale up the enemies health.
     public virtual void IncreaseHealth(int multiplier) {
-        hp = Convert.ToInt32(Math.Floor(300*(multiplier*0.3f)));
-    }
-
-    // Takes an integer and reduces the enemies health by this amount.
-    public void ReduceHp(int amount) {
-        hp -= amount;
-        if (hp < 0) {
-            hp = 0;
-        }
-    }
-
-    // Takes an integer and increases their hp by this amount.
-    public void RestoreHp(int amount) {
-        hp += amount;
-        if (hp > maxHp) {
-            hp = maxHp;
-        }
+        maxHp = Convert.ToInt32(maxHp+(10*multiplier));
+        hp = maxHp;
+        Debug.Log("Spawned with Hp: " + hp);
     }
 }

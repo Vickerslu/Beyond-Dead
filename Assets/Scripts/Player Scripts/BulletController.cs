@@ -5,7 +5,8 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public float speed = 50f;
-    public int damage = 10;
+    public int damage;
+    public float force = 10f; //how far the bullet pushes back
     public Rigidbody2D rb;
 
     void Update(){
@@ -22,7 +23,7 @@ public class BulletController : MonoBehaviour
             if (enemy!= null)
             {
                 enemy.TakeDamage(damage);
-                Score.score += 10;
+                Score.score += 1;
             }
             else {
                 Destroy(gameObject);

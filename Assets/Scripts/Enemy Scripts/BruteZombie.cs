@@ -9,21 +9,17 @@ public class BruteZombie : Enemy
     protected override void Start()
     {
         base.Start();
+        // base.maxHp = 300;
+        // base.hp = base.maxHp;
         agent.speed = speedMultiplier * UnityEngine.Random.Range(1f,2f);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
-
-    public override void IncreaseHealth(int multiplier)
-    {
-        base.hp = Convert.ToInt32(Math.Floor(300*(multiplier*0.3f)));
+    public override void IncreaseHealth(int multiplier) {
+        base.maxHp = Convert.ToInt32(base.maxHp+(12*multiplier));
+        base.hp = base.maxHp;
     }
 
     public override void DealDamage(Player player) {
-        player.ReduceHp(60f);
+        player.ReduceHp(75f);
     }
 }

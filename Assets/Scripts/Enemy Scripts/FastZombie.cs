@@ -9,18 +9,14 @@ public class FastZombie : Enemy
     protected override void Start()
     {
         base.Start();
+        // base.maxHp = 75;
+        // base.hp = base.maxHp;
         agent.speed = speedMultiplier * UnityEngine.Random.Range(7f,9f);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-    }
-
-    public override void IncreaseHealth(int multiplier)
-    {
-        base.hp = Convert.ToInt32(Math.Floor(50*(multiplier*0.3f)));
+    public override void IncreaseHealth(int multiplier) {
+        base.maxHp = Convert.ToInt32(base.maxHp+(8*multiplier));
+        base.hp = base.maxHp;
     }
 
     public override void DealDamage(Player player) {

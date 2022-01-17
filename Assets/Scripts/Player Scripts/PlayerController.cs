@@ -16,14 +16,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCamera;
 
-    public static int ammo = 30;
     private Coroutine shootingCoroutine;
-    private float regenTickTime = 0.5f;
+    private float regenTickTime = 0.1f;
     private WaitForSeconds regenTick;
 
     private Transform aimTransform;
 
-    [SerializeField] public float speed = 10f;
+    [SerializeField] public float speed = 8f;
     [SerializeField] public float sprintSpeed;
     [SerializeField] private float movementVelocity = 5f;
     public bool isSprinting;
@@ -54,11 +53,10 @@ public class PlayerController : MonoBehaviour
     //  get mouse pos, create bullet with correct attributes
     private IEnumerator PlayerShoot(){
         // yield return new WaitForSeconds(0.1f);
-        while(ammo - 1 >= 0) {
+        while(true) {
             if (!PauseMenu.GameIsPaused){
                 Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
                 mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
-                ammo -= 1;
                 GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
                 g.SetActive(true);
                 if(player.hasDoubleTapPerk) {
