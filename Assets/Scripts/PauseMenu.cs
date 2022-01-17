@@ -10,12 +10,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame){
-            if (GameIsPaused) {
-                Resume();
-            } else {
-                Pause();
-            }
+        // if (Keyboard.current.escapeKey.wasPressedThisFrame){
+        //     if (GameIsPaused) {
+        //         Resume();
+        //     } else {
+        //         Pause();
+        //     }
+        // }
+        if (Keyboard.current.mKey.wasPressedThisFrame) {
+            SceneManager.LoadScene("StartMenu");
         }
     }
     public void Resume() {
@@ -25,9 +28,9 @@ public class PauseMenu : MonoBehaviour
     }
     
     void Pause(){
-        PauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
         GameIsPaused = true;
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0.00000001f;
     }
 
     public void loadMenu() {
