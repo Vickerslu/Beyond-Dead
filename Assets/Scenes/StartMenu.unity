@@ -5528,11 +5528,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "A brave adventurer wakes up on an unexplored planet after colliding with
     a meteor. The ship looks fixable, but they must collect resources from the planet
-    to get back up and running. \r\n\r\nCreatures inhabit the planet and are hoarding
-    materials, and they're not keen on sharing- or visitors for that matter!\r\n\r\nMaybe
-    if they can get these materials from them, they could bring them back to the
-    crash site and fix the ship.\r\n\r\nMove - WASD\r\nAim - Mouse\r\nShoot - Left
-    Click\nSprint - Shift\nInteract - E\nMenu - M"
+    to get back up and running. \r\n\r\nCreatures inhabit the planet, maybe if they
+    can get these materials from them, they could bring them back to the crash site
+    and fix the ship.\r\n\r\nMove - WASD\r\nAim - Mouse\r\nShoot - Left Click\nSprint
+    - Shift\nInteract - E\nMenu - M"
 --- !u!222 &1890764196
 CanvasRenderer:
   m_ObjectHideFlags: 0
