@@ -8,6 +8,9 @@ TagManager:
   - Bullet
   - Part
   - Ship
+  - SpawnPoint
+  - Room
+  - Trigger
   layers:
   - Default
   - TransparentFX
