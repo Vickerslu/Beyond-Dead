@@ -5,12 +5,17 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] public int price;
+    [SerializeField] private GameObject door;
 
-    public void Buy()
+    public void Awake() {
+        price = 500;
+    }
+
+    public void BuyDoor()
     {
         if(Score.score >= price) {
             Score.score -= price;
-            Destroy(gameObject);
+            door.SetActive(false);
         }
     }
 }

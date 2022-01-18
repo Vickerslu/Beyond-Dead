@@ -12,7 +12,7 @@ public class MenuCode : MonoBehaviour
     public void PlayGame()
     {
         Ship.repairProgress = 0;
-        Score.score = 10000000; // CHANGE
+        Score.score = 2500; // CHANGE
         PartText.parts = 0;
         SceneManager.LoadScene("InGame");
     }
