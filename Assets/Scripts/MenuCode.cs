@@ -16,6 +16,10 @@ public class MenuCode : MonoBehaviour
         PartText.parts = 0;
         SceneManager.LoadScene("InGame");
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 
     public void PlayTutorial()
     {
