@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
 {
     public bool inRange;
     private InputActions playerInput;
     public UnityEvent interactAction;
+    [SerializeField] public Text EToInteractText;
 
     void Awake() {
         playerInput = new InputActions();
@@ -37,7 +39,7 @@ public class Interactable : MonoBehaviour
         if (hitInfo.gameObject.tag == "Player")
         {
             inRange = true;
-            Debug.Log("In range");
+            EToInteractText.text = "Press E to Interact";
         }
     }
 
@@ -46,7 +48,7 @@ public class Interactable : MonoBehaviour
         if (hitInfo.gameObject.tag == "Player")
         {
             inRange = false;
-            Debug.Log("Out of range");
+            EToInteractText.text = "";
         }
     }
 }

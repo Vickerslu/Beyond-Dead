@@ -423,6 +423,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269859926515417194, guid: d42059d41ea89fa449fc9b0f2e1edaf9,
         type: 3}
+      propertyPath: EToInteractText
+      value: 
+      objectReference: {fileID: 3399435600553387817, guid: 1765ac5a3aec18d44839e9b76c6d42af,
+        type: 3}
+    - target: {fileID: 7269859926515417194, guid: d42059d41ea89fa449fc9b0f2e1edaf9,
+        type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -449,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 7269859926515417194, guid: d42059d41ea89fa449fc9b0f2e1edaf9,
         type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Buy
+      value: BuyPerk
       objectReference: {fileID: 0}
     - target: {fileID: 7269859926515417194, guid: d42059d41ea89fa449fc9b0f2e1edaf9,
         type: 3}
