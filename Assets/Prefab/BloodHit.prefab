@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9210492756844753180}
   - component: {fileID: 9210492756844753179}
   m_Layer: 0
-  m_Name: BloodSplater
+  m_Name: BloodHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210492756844753178}
-  m_LocalRotation: {x: -0.8191521, y: 0, z: 0, w: 0.57357645}
+  m_LocalRotation: {x: -0.8433915, y: 0, z: 0, w: 0.53729963}
   m_LocalPosition: {x: -2.1864545, y: -2.8899484, z: -4.696604}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -110, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -115, y: 0, z: 0}
 --- !u!198 &9210492756844753180
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -600,14 +600,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 40
+    maxNumParticles: 1
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
