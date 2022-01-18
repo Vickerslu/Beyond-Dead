@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     // [SerializeField] private GameObject player;
 
     public GameObject blood;
-    public GameObject bloodHit;
 
     public Animator animator;
 
@@ -82,7 +81,6 @@ public class Enemy : MonoBehaviour
     // Takes an integer and reduces the enemies health by this amount.
     public void ReduceHp(int amount) {
         hp = hp - amount;
-        Instantiate(bloodHit, transform.position, Quaternion.identity);
         Debug.Log("Damage Taken: " + amount + "Hp: " + hp);
         if (hp < 0) {
             hp = 0;

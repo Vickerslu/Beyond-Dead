@@ -58,11 +58,9 @@ public class PlayerController : MonoBehaviour
                 Vector2 mousePositionOnScreen = playerInput.Player.Look.ReadValue<Vector2>();
                 mousePositionInWorld = mainCamera.ScreenToWorldPoint(mousePositionOnScreen);
                 GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
-
                 g.SetActive(true);
                 if(player.hasDoubleTapPerk) {
-            
-                    GameObject g2 = Instantiate(bullet, aimTransform.localScale, bulletDirection.rotation);
+                    GameObject g2 = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
                     g2.SetActive(true);
                 }
                 yield return regenTick;

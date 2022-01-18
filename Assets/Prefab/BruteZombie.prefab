@@ -118,8 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 9210492756844753178, guid: acf6e651366e55b4ca74bd9fa1513bf7, type: 3}
-  bloodHit: {fileID: 9210492756844753178, guid: 5643be8d2735d0848b3748eedb118075,
-    type: 3}
   animator: {fileID: 983548145}
   hasDrop: 0
   part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
