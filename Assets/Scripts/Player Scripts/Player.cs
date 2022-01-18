@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
         regeningHp = false;
     }
 
+    // https://www.youtube.com/watch?v=ahadN8aGvXg
     public void Knockback(float duration, float power, Transform obj) {
         if(!isKnockedBack) {
             isKnockedBack = true;
