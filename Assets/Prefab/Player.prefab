@@ -870,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  shell: {fileID: 9210492756844753178, guid: acf6e651366e55b4ca74bd9fa1513bf7, type: 3}
   animator: {fileID: 0}
   speed: 80
   sprintSpeed: 0
