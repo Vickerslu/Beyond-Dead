@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     // [SerializeField] private float moveSpeed;
     // [SerializeField] private GameObject player;
 
+    public GameObject blood;
+
     public Animator animator;
 
     public bool hasDrop;
@@ -70,6 +72,7 @@ public class Enemy : MonoBehaviour
             if(hasDrop) {
                 Instantiate(part, transform.position, Quaternion.identity);
             }
+            Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Score.score += 5;
         }

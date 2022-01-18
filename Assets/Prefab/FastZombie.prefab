@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11593231adc813f419dea51182e5f5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 9210492756844753178, guid: acf6e651366e55b4ca74bd9fa1513bf7, type: 3}
   animator: {fileID: 8615445109142730190}
   hasDrop: 0
   part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
