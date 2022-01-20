@@ -893,10 +893,10 @@ MonoBehaviour:
   maxHp: 100
   zombieSound:
   - {fileID: 8300000, guid: ec3975aadd5ada04bbb285b52c2218fc, type: 3}
-  - {fileID: 8300000, guid: f29ff89337230ff419c432de536643bb, type: 3}
-  - {fileID: 8300000, guid: 3e330073ef940424d98987d0b6f24cd1, type: 3}
-  - {fileID: 8300000, guid: 4d4c1b60765b573439973fc1f1f0e7a8, type: 3}
-  - {fileID: 8300000, guid: 8d6e1c4b651751c42975ccc8d49e47e3, type: 3}
+  - {fileID: 8300000, guid: 60738f4107309644581cf75c311849ff, type: 3}
+  - {fileID: 8300000, guid: 06a42ea5d196c6343b46dee8cb22d817, type: 3}
+  - {fileID: 8300000, guid: 0888aa91441dc564c89c4c1d788ff3aa, type: 3}
+  - {fileID: 8300000, guid: 443600043ce68704da948e2604eef3cc, type: 3}
   - {fileID: 8300000, guid: 1cb13d7ec54dc294195e3798128fa0f7, type: 3}
   - {fileID: 8300000, guid: a9a7e295ea596b645911d9b190cf45fb, type: 3}
   healthBar: {fileID: 7368012250357015167}

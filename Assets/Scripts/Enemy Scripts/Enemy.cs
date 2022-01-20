@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             //when the zombie dies blood splatter is called
             Instantiate(blood, transform.position, Quaternion.identity);
-            Score.score += 5;
+            Score.score += 10;
         }
     }
 
