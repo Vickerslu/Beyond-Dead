@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+// 'Lucky' perk doubles the chances of an enemy dropping a part
 public class LuckyPerk : Perk
 {
     protected override void Start() {

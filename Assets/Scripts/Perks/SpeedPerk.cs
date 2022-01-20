@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 'Speed' perk increases the speed at which the player wlaks and sprints
 public class SpeedPerk : Perk
 {
     protected override void Start() {

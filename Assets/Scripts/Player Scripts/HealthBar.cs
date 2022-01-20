@@ -22,9 +22,10 @@ public class HealthBar : MonoBehaviour
 		slider.value = health;
 	}
 
+    // increases the width of the bar. visual prompt to the user that their max health has increased
 	public void ExtendBar() {
 		RectTransform rt = this.GetComponent<RectTransform>();
 		rt.sizeDelta = new Vector2 (rt.rect.width*1.5f, rt.rect.height);
 	}
 
-} 
+}

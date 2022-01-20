@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+// Brute is a type of enemy. They are slower but deal a lot more damage and have a lot a knockback power
 public class BruteZombie : Enemy
 {
-    // Start is called before the first frame update
+    // Parent's start method is called but a couple of variables are changed
     protected override void Start()
     {
         base.Start();

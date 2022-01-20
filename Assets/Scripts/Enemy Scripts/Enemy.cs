@@ -4,25 +4,26 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
+// An enemy is anything that attacks the player
 public class Enemy : MonoBehaviour
 {
-    // [SerializeField] private float moveSpeed;
-    // [SerializeField] private GameObject player;
-
+    // particle related
     public GameObject blood;
     public GameObject bloodHit;
-
     public Animator animator;
 
+    // if it hasDrop, it will drop a part when killed
     public bool hasDrop;
     public Part part;
 
     public int maxHp;
     public int hp;
 
+    // 'target' will be the player. Neccessary to set these up for nav mesh navigation
     [SerializeField] GameObject target;
     public NavMeshAgent agent;
 
+    // 'drop rate' equates mathematically to the average amount of zombies needed to kill to get 5 parts
     public static int dropRate = 25;
     public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
@@ -43,8 +44,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+        // travels toward the player's position through the nav mesh
         agent.SetDestination(target.transform.position);
-        //sets the amimation variables 
+        //sets the amimation variables
         //so it change to different animations
         if(agent.speed > 0.01) {
             animator.SetFloat ("Speed", (float)1.00);
@@ -84,13 +86,14 @@ public class Enemy : MonoBehaviour
     // Takes an integer and reduces the enemies health by this amount.
     public void ReduceHp(int amount) {
         hp = hp - amount;
-        //each bullet hit that causes damage will create a little blood 
+        //each bullet hit that causes damage will create a little blood
         Instantiate(bloodHit, transform.position, Quaternion.identity);
         if (hp < 0) {
             hp = 0;
         }
     }
 
+    // if the enemy collides with the player, knock them back and deal damage to them
     protected virtual void OnCollisionEnter2D(Collision2D hitInfo) {
         if (hitInfo.gameObject.tag == "Player")
         {
@@ -100,11 +103,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // deal damage to the player
     public virtual void DealDamage(Player player) {
         player.ReduceHp(25f);
     }
 
-    // Takes an integer and uses this integer in a formula to scale up the enemies health.
+    // Takes an integer and uses this integer in a formula to scale up the enemies health. (multiplier is 1 by default, but can be changed in the settings)
     public virtual void IncreaseHealth(int multiplier) {
         maxHp = Convert.ToInt32(maxHp+(10*multiplier));
         hp = maxHp;

@@ -13,10 +13,10 @@ public class BulletController : MonoBehaviour
         transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
     }
 
-    // Deals with what happens when a bullet collides with something. Ignores if it is another bullet or the player.
-    // If it hits an enemy, deal damage to that enemy and increase the score. Remove the bullet in this case.
+    // Deals with what happens when a bullet collides with an enemy
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        // possibly the lowest IQ 'if' statement ive ever written to be honest
         if (hitInfo.gameObject.tag != "Player" && hitInfo.gameObject.tag != "Bullet" && hitInfo.gameObject.tag != "Part" && hitInfo.gameObject.tag != "Trigger")
         {
             Enemy enemy = hitInfo.GetComponent<Enemy>();

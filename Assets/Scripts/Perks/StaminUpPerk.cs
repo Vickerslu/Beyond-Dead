@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 'Stamina up' perk increases the players maximum stamina, allowing them to sprint for longer durations
 public class StaminUpPerk : Perk
 {
     protected override void Start() {

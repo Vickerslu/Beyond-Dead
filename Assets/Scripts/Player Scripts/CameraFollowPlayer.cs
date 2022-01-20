@@ -15,7 +15,7 @@ public class CameraFollowPlayer : MonoBehaviour
         target = GameObject.Find("Player");
     }
 
-    //https://www.youtube.com/watch?v=s4Yex7oliwQ&ab_channel=Chris%27Tutorials
+    // Reference: https://www.youtube.com/watch?v=s4Yex7oliwQ&ab_channel=Chris%27Tutorials
     void FixedUpdate()
     {
         if (target)
