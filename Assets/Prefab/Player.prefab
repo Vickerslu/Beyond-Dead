@@ -760,7 +760,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7368012251281450874
 MonoBehaviour:
@@ -905,7 +905,7 @@ MonoBehaviour:
   hpRegenRate: 10
   parts: 0
   isShooting: 0
-  canTakeDamage: 0
+  invincibilityDurationSeconds: 0.5
   hasDoubleTapPerk: 0
 --- !u!58 &2798484527073656064
 CircleCollider2D:

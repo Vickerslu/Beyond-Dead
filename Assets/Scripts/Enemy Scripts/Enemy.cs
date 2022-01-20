@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject target;
     public NavMeshAgent agent;
 
-    public static int dropRate = 100;
+    public static int dropRate = 25;
     public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
     protected float knockbackPower;
@@ -83,7 +83,6 @@ public class Enemy : MonoBehaviour
     public void ReduceHp(int amount) {
         hp = hp - amount;
         Instantiate(bloodHit, transform.position, Quaternion.identity);
-        Debug.Log("Damage Taken: " + amount + "Hp: " + hp);
         if (hp < 0) {
             hp = 0;
         }
@@ -94,10 +93,7 @@ public class Enemy : MonoBehaviour
         {
             Player player = hitInfo.gameObject.GetComponent<Player>();
             player.Knockback(knockbackDuration, knockbackPower, this.transform);
-            if (player.canTakeDamage) {
-                DealDamage(player);
-                StartCoroutine(player.damageTimer());
-            }
+            DealDamage(player);
         }
     }
 
@@ -109,6 +105,5 @@ public class Enemy : MonoBehaviour
     public virtual void IncreaseHealth(int multiplier) {
         maxHp = Convert.ToInt32(maxHp+(10*multiplier));
         hp = maxHp;
-        Debug.Log("Spawned with Hp: " + hp);
     }
 }

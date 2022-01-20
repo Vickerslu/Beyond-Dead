@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
 
     public bool isShooting;
 
-    public bool canTakeDamage;
+    [SerializeField] private float invincibilityDurationSeconds;
+    private bool isInvinsible;
     private bool isKnockedBack;
     private Rigidbody2D rb;
 
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-        canTakeDamage = true;
+        isInvinsible = false;
         rb = GetComponent<Rigidbody2D>();
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
     // Takes a float, and decreases the players hp by this amount. Deals with what happens if the players hp hits 0.
     // Also updates the on-screen health bar
     public void ReduceHp(float amount) {
+        if(isInvinsible) return;
         hp = hp - amount;
         if (hp < 1f) {
             hp = 0f;
@@ -86,6 +88,15 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(hp);
         //plays random sound when player is hit from array of sounds
         SoundManager.Instance.PlaySound(zombieSound[UnityEngine.Random.Range(0,zombieSound.Length)]);
+        StartCoroutine(BecomeInvinsible());
+    }
+
+    private IEnumerator BecomeInvinsible() {
+        isInvinsible = true;
+        Debug.Log("Player turned invincible!");
+        yield return new WaitForSeconds(invincibilityDurationSeconds);
+        isInvinsible = false;
+        Debug.Log("Player is no longer invincible!");
     }
 
     // Takes a float, and increases the players hp by this amount. Deals with what happens if the players hp hits its max.
@@ -106,14 +117,6 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         regeningHp = false;
-    }
-
-    public IEnumerator damageTimer() {
-        if(canTakeDamage) {
-            canTakeDamage = false;
-            yield return new WaitForSeconds(0.5f);
-            canTakeDamage = true;
-        }
     }
 
     // https://www.youtube.com/watch?v=ahadN8aGvXg
