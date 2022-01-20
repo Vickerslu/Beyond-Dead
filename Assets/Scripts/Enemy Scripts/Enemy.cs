@@ -44,7 +44,8 @@ public class Enemy : MonoBehaviour
     protected virtual void Update()
     {
         agent.SetDestination(target.transform.position);
-        //amimation
+        //sets the amimation variables 
+        //so it change to different animations
         if(agent.speed > 0.01) {
             animator.SetFloat ("Speed", (float)1.00);
             animator.SetFloat ("Horizontal", (float)target.transform.position.x);
@@ -74,6 +75,7 @@ public class Enemy : MonoBehaviour
                 Instantiate(part, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
+            //when the zombie dies blood splatter is called
             Instantiate(blood, transform.position, Quaternion.identity);
             Score.score += 5;
         }
@@ -82,6 +84,7 @@ public class Enemy : MonoBehaviour
     // Takes an integer and reduces the enemies health by this amount.
     public void ReduceHp(int amount) {
         hp = hp - amount;
+        //each bullet hit that causes damage will create a little blood 
         Instantiate(bloodHit, transform.position, Quaternion.identity);
         if (hp < 0) {
             hp = 0;
