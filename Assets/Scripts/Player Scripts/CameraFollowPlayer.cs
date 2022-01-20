@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// makes camera follow player smoothly
+// https://www.youtube.com/watch?v=s4Yex7oliwQ&ab_channel=Chris%27Tutorials
+
 public class CameraFollowPlayer : MonoBehaviour
 {
     private GameObject target;

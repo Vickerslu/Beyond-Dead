@@ -15,3 +15,9 @@ Shoot - Left Click
 
 # References
 Pathfinding - https://github.com/h8man/NavMeshPlus
+
+https://mythril-age.itch.io/mythril-age-sprites-volume-1
+
+https://opengameart.org/content/isometric-spaceship-sprites-3
+
+https://www.youtube.com/watch?v=fuGQFdhSPg4

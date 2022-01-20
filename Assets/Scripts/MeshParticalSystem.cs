@@ -65,7 +65,5 @@ public class MeshParticalSystem : MonoBehaviour
         triangles[tIndex + 5] = vIndex3;
 
         quadIndex++;
-
     }
-
 }

@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   damage: 10
+  force: 10
   rb: {fileID: 0}
 --- !u!114 &7782491780282647509
 MonoBehaviour:
@@ -152,4 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9dd6ee5c2a7294bb1594703f8fe5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: 47fe1c7e40094374eaa07ad7ac3e2fd7, type: 3}
+  _clip: {fileID: 8300000, guid: 878cfcc7f631998488d860aa1947eb37, type: 3}

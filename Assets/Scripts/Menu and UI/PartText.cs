@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PartText : MonoBehaviour
 {
-    public static int parts = 0;
+    public static int parts;
     public Text partsText;
 
     // Update is called once per frame

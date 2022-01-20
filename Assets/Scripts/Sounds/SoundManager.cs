@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Took inspiration to create a simular sound manager as the one in this video. 
+// https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
