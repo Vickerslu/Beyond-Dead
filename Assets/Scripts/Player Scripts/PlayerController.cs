@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
             // gun aim
+            // to switch the gun sprite from left to right
             aimTransform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
             Vector3 aimlocalScale = Vector3.one;
             if (angle > 90 || angle < -90) {
@@ -123,7 +124,8 @@ public class PlayerController : MonoBehaviour
             // shootingCoroutine = StartCoroutine(RegenStamina(regenAmount));
         }
 
-        //amimation
+        //sets the amimation variables 
+        //so it change to different animations
         if(speed > 0.01) {
             animator.SetFloat ("Speed", (float)1.00);
             animator.SetFloat ("Horizontal", movement.x);
