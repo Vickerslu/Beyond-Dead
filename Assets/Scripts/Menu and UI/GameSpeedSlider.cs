@@ -11,6 +11,6 @@ public class GameSpeedSlider : MonoBehaviour
     {
         Enemy.speedMultiplier = _slider.value;
         _slider.onValueChanged.AddListener(val => Enemy.speedMultiplier = val);
-        _slider.onValueChanged.AddListener(val => valueText.text = Mathf.Round(val * 100f) / 100f + "");
+        _slider.onValueChanged.AddListener(val => valueText.text = Mathf.Round(val * 100f) / 100f + "x");
     }
 }
