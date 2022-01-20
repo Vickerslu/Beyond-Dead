@@ -106,7 +106,7 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 8615445109142730190}
   hasDrop: 0
-  part: {fileID: -3627994545614178407, guid: fde46601955159f4a99a398bb7eae82f, type: 3}
+  part: {fileID: -3627994545614178407, guid: 05f5116be7aa20148881d81e34d579a4, type: 3}
   maxHp: 0
   hp: 0
   target: {fileID: 0}
