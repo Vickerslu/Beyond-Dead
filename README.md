@@ -14,7 +14,18 @@ Aim - Mouse
 Shoot - Left Click
 
 # References
+Zombie sounds were made by us. 
+
 Pathfinding - https://github.com/h8man/NavMeshPlus
+
+Background Music 
+https://www.chosic.com/download-audio/27249/
+
+Background Music 
+https://www.chosic.com/download-audio/29697/
+
+Pistol shot audio
+https://www.videvo.net/sound-effect/gun-shot-single-fire-in-pe1097304/246186/
 
 https://mythril-age.itch.io/mythril-age-sprites-volume-1
 
