@@ -72,8 +72,8 @@ public class Enemy : MonoBehaviour
             if(hasDrop) {
                 Instantiate(part, transform.position, Quaternion.identity);
             }
-            Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            Instantiate(blood, transform.position, Quaternion.identity);
             Score.score += 5;
         }
     }
