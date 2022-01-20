@@ -905,6 +905,7 @@ MonoBehaviour:
   hpRegenRate: 10
   parts: 0
   isShooting: 0
+  canTakeDamage: 0
   hasDoubleTapPerk: 0
 --- !u!58 &2798484527073656064
 CircleCollider2D:

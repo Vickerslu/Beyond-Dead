@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     public bool isShooting;
 
+    public bool canTakeDamage;
     private bool isKnockedBack;
     private Rigidbody2D rb;
 
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        canTakeDamage = true;
         rb = GetComponent<Rigidbody2D>();
         hp = maxHp;
         healthBar.SetMaxHealth(maxHp);
@@ -104,6 +106,14 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
         regeningHp = false;
+    }
+
+    public IEnumerator damageTimer() {
+        if(canTakeDamage) {
+            canTakeDamage = false;
+            yield return new WaitForSeconds(0.5f);
+            canTakeDamage = true;
+        }
     }
 
     // https://www.youtube.com/watch?v=ahadN8aGvXg

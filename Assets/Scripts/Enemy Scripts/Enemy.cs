@@ -94,7 +94,10 @@ public class Enemy : MonoBehaviour
         {
             Player player = hitInfo.gameObject.GetComponent<Player>();
             player.Knockback(knockbackDuration, knockbackPower, this.transform);
-            DealDamage(player);
+            if (player.canTakeDamage) {
+                DealDamage(player);
+                StartCoroutine(player.damageTimer());
+            }
         }
     }
 
