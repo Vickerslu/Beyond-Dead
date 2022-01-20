@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000085831, y: 958}
+  m_AnchoredPosition: {x: -0.000085831, y: 649}
   m_SizeDelta: {x: 434.1, y: 153.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8880245993927961139
@@ -337,7 +337,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: e52ebb63432ad3b47999887cbf156dc2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89dad9e25b26a2b4696c435f749cbb3b, type: 3}
   m_Color: {r: 0.67058825, g: 0.67058825, b: 0.67058825, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -361,7 +361,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010794163, y: -1.1724577}
+  m_Offset: {x: -0.010794163, y: -0.30935836}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -372,7 +372,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6109104, y: 1.1981945}
+  m_Size: {x: 1.6109104, y: 2.9243932}
   m_EdgeRadius: 0
 --- !u!208 &8880245994753804259
 NavMeshObstacle:
@@ -420,7 +420,7 @@ MonoBehaviour:
   - {x: 0.8349886, y: -1.7730274, z: 0}
   m_ShapePathHash: -849038417
   m_Mesh: {fileID: 0}
-  m_InstanceId: -377330
+  m_InstanceId: 65270
 --- !u!114 &8880245994753804253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 2.4
 --- !u!1 &8880245995318490557
 GameObject:
   m_ObjectHideFlags: 0
