@@ -16,7 +16,8 @@ Shoot - Left Click
 # References
 Zombie sounds were made by us. 
 
-Pathfinding - https://github.com/h8man/NavMeshPlus
+Pathfinding
+https://github.com/h8man/NavMeshPlus
 
 Background Music 
 https://www.chosic.com/download-audio/27249/
@@ -56,3 +57,12 @@ https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
         
 New unity input method used in player controller 
 https://www.youtube.com/watch?v=yRI44aYLDQs&ab_channel=samyam
+
+Camera follows player tutorial
+https://www.youtube.com/watch?v=s4Yex7oliwQ&ab_channel=Chris%27Tutorials
+
+Knockback tutorial
+https://www.youtube.com/watch?v=ahadN8aGvXg
+
+Invunerability frames tutorial
+https://www.aleksandrhovhannisyan.com/blog/invulnerability-frames-in-unity/#1-make-the-player-invulnerable-start-the-coroutine
