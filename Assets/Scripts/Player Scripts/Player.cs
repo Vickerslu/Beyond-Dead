@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 // Top down movement 
 // https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
@@ -45,6 +46,10 @@ public class Player : MonoBehaviour
     {
         if(hp != maxHp && !regeningHp) {
             StartCoroutine(RegenHealth());
+        }
+        
+        if (Keyboard.current.mKey.wasPressedThisFrame) {
+            SceneManager.LoadScene("StartMenu");
         }
     }
 

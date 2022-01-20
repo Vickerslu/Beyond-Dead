@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
         if (hitInfo.gameObject.tag == "Player")
         {
             inRange = true;
-            EToInteractText.text = "Press E to Interact";
+            EToInteractText.text = "Press E to Purchase";
         }
     }
 

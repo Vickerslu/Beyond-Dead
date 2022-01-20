@@ -7,11 +7,7 @@ public class MenuCode : MonoBehaviour
     public void Start(){
 
     }
-    public void Update(){
-        if (Keyboard.current.mKey.wasPressedThisFrame) {
-            SceneManager.LoadScene("StartMenu");
-        }
-    }
+    
 
     // Resets the main variables and reloads the game
     public void PlayGame()
