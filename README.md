@@ -44,3 +44,15 @@ https://www.pinterest.co.uk/pin/445082375673641896/
 
 Ship Dropped Parts:
 https://zintoki.itch.io/space-breaker
+
+Top Down Movement for the animation:
+https://www.youtube.com/watch?v=whzomFgjT50
+
+Top down player movement 
+https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
+
+quaternion.euler rotatoin 
+https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
+        
+New unity input method used in player controller 
+https://www.youtube.com/watch?v=yRI44aYLDQs&ab_channel=samyam
