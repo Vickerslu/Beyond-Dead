@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class RepairProgress : MonoBehaviour
 {
-    public TextMesh repairProgress;
+    public Text repairProgress;
 
     void Update()
     {
