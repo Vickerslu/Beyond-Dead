@@ -27,8 +27,20 @@ https://www.chosic.com/download-audio/29697/
 Pistol shot audio
 https://www.videvo.net/sound-effect/gun-shot-single-fire-in-pe1097304/246186/
 
+Character and zombies:
 https://mythril-age.itch.io/mythril-age-sprites-volume-1
 
+Spaceship:
 https://opengameart.org/content/isometric-spaceship-sprites-3
 
+Gun aiming tutorial:
 https://www.youtube.com/watch?v=fuGQFdhSPg4
+
+Map tile map:
+https://szadiart.itch.io/rpg-worlds-ca
+
+Vending Machine:
+https://www.pinterest.co.uk/pin/445082375673641896/
+
+Ship Dropped Parts:
+https://zintoki.itch.io/space-breaker
