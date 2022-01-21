@@ -12,6 +12,9 @@ Maybe if they can get these materials from them, they could bring them back to t
 Move - WASD
 Aim - Mouse
 Shoot - Left Click
+Sprint - Shift
+
+SCENE TO RUN = StartMenu
 
 # References
 Zombie sounds were made by us. 
