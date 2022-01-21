@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-// Top down movement 
+// Top down movement
 // https://www.youtube.com/watch?v=u8tot-X_RBI&t=1s&ab_channel=BMo
 public class Player : MonoBehaviour
 {
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         if(hp != maxHp && !regeningHp) {
             StartCoroutine(RegenHealth());
         }
-        
+
         if (Keyboard.current.mKey.wasPressedThisFrame) {
             SceneManager.LoadScene("StartMenu");
         }
@@ -126,15 +126,13 @@ public class Player : MonoBehaviour
     // Takes the duration of the knockback, how far the player should be pushed, and the object doing the pushing,
     // and knocks the player bac in the opposite direction to the momentum of the object
     public void Knockback(float duration, float power, Transform obj) {
-        if(!isKnockedBack) {
-            isKnockedBack = true;
+        if(!isInvinsible) {
             float timer = 0;
             while(duration > timer) {
                 timer += Time.deltaTime;
                 Vector2 direction = (obj.transform.position - this.transform.position).normalized;
                 rb.AddForce(-direction * power);
             }
-            isKnockedBack = false;
         }
     }
 
