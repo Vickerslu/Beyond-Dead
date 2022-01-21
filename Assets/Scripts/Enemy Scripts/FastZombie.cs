@@ -9,7 +9,7 @@ public class FastZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        knockbackPower = 0.75f;
+        knockbackPower = 0.25f;
         knockbackDuration = 3f;
         agent.speed = speedMultiplier * UnityEngine.Random.Range(7f,8f);
     }

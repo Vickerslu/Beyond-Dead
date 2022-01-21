@@ -11,7 +11,7 @@ public class BruteZombie : Enemy
     protected override void Start()
     {
         base.Start();
-        knockbackPower = 1.5f;
+        knockbackPower = 0.75f;
         knockbackDuration = 3f;
         agent.speed = speedMultiplier * UnityEngine.Random.Range(3f,4f);
     }
