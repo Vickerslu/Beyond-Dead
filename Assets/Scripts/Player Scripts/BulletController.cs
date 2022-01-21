@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
             if (enemy!= null)
             {
                 enemy.TakeDamage(damage);
-                Score.score += 5;
+                Score.score += 10;
             }
             else {
                 Destroy(gameObject);

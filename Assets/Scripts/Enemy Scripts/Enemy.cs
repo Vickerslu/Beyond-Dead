@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
 
     // 'drop rate' equates mathematically to the average amount of zombies needed to kill to get 5 parts
-    public static int dropRate = 25;
+    public static int dropRate = 15;
     public static float speedMultiplier = 1; //gets overridden by zombie speed slider
 
     protected float knockbackPower;
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             //when the zombie dies blood splatter is called
             Instantiate(blood, transform.position, Quaternion.identity);
-            Score.score += 10;
+            Score.score += 30;
         }
     }
 
